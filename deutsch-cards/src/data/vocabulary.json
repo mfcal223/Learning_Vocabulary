@@ -1,0 +1,310 @@
+[
+  {
+    "word": "Haus",
+    "article": "das",
+    "type": "noun",
+    "image": "H/das_Haus.jpg",
+    "category": "H"
+  },
+  {
+    "word": "Hund",
+    "article": "der",
+    "type": "noun",
+    "image": "H/der_Hund.jpg",
+    "category": "H"
+  },
+  {
+  "word": "Dose",
+  "article": "die",
+  "type": "noun",
+  "image": "D/die_Dose.png",
+  "category": "D"
+  },
+  {
+    "word": "Schnee",
+    "article": "der",
+    "type": "noun",
+    "image": "SCH/der_Schnee.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "Schneemann",
+    "article": "der",
+    "type": "noun",
+    "image": "SCH/der_Schneemann.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "Schlitten",
+    "article": "der",
+    "type": "noun",
+    "image": "SCH/der_Schlitten.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "Schal",
+    "article": "der",
+    "type": "noun",
+    "image": "SCH/der_Schal.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "Schwamm",
+    "article": "der",
+    "type": "noun",
+    "image": "SCH/der_Schwamm.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "Tisch",
+    "article": "der",
+    "type": "noun",
+    "image": "SCH/der_Tisch.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "Fisch",
+    "article": "der",
+    "type": "noun",
+    "image": "SCH/der_Fisch.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "Schaf",
+    "article": "das",
+    "type": "noun",
+    "image": "SCH/das_Schaf.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "Frosch",
+    "article": "der",
+    "type": "noun",
+    "image": "SCH/der_Frosch.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "Schloss",
+    "article": "das",
+    "type": "noun",
+    "image": "SCH/das_Schloss.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "Schiff",
+    "article": "das",
+    "type": "noun",
+    "image": "SCH/das_Schiff.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "Schild",
+    "article": "das",
+    "type": "noun",
+    "image": "SCH/das_Schild.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "Schwein",
+    "article": "das",
+    "type": "noun",
+    "image": "SCH/das_Schwein.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "Flasche",
+    "article": "die",
+    "type": "noun",
+    "image": "SCH/die_Flasche.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "Schule",
+    "article": "die",
+    "type": "noun",
+    "image": "SCH/die_Schule.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "Schere",
+    "article": "die",
+    "type": "noun",
+    "image": "SCH/die_Schere.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "Tasche",
+    "article": "die",
+    "type": "noun",
+    "image": "SCH/die_Tasche.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "schneiden",
+    "article": "",
+    "type": "verb",
+    "image": "SCH/schneiden.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "schlafen",
+    "article": "",
+    "type": "verb",
+    "image": "SCH/schlafen.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "schwimmen",
+    "article": "",
+    "type": "verb",
+    "image": "SCH/schwimmen.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "waschen",
+    "article": "",
+    "type": "verb",
+    "image": "SCH/waschen.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "schauen",
+    "article": "",
+    "type": "verb",
+    "image": "SCH/schauen.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "schnell",
+    "article": "",
+    "type": "adjective",
+    "image": "SCH/schnell.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "schlau",
+    "article": "",
+    "type": "adjective",
+    "image": "SCH/schlau.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "schwer",
+    "article": "",
+    "type": "adjective",
+    "image": "SCH/schwer.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "falsch",
+    "article": "",
+    "type": "adjective",
+    "image": "SCH/falsch.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "Schrank",
+    "article": "der",
+    "type": "noun",
+    "image": "SCH/der_Schrank.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "Schlüssel",
+    "article": "der",
+    "type": "noun",
+    "image": "SCH/der_Schluessel.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "Schatz",
+    "article": "der",
+    "type": "noun",
+    "image": "SCH/der_Schatz.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "Kühlschrank",
+    "article": "der",
+    "type": "noun",
+    "image": "SCH/der_Kuehlschrank.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "Regenschirm",
+    "article": "der",
+    "type": "noun",
+    "image": "SCH/der_Regenschirm.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "Schlange",
+    "article": "die",
+    "type": "noun",
+    "image": "SCH/die_Schlange.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "Schnecke",
+    "article": "die",
+    "type": "noun",
+    "image": "SCH/die_Schnecke.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "Schulranzen",
+    "article": "der",
+    "type": "noun",
+    "image": "SCH/der_Schulranzen.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "Waschmaschine",
+    "article": "die",
+    "type": "noun",
+    "image": "SCH/die_Waschmaschine.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "Rutsche",
+    "article": "die",
+    "type": "noun",
+    "image": "SCH/die_Rutsche.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "Fleisch",
+    "article": "das",
+    "type": "noun",
+    "image": "SCH/das_Fleisch.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "Geschenk",
+    "article": "das",
+    "type": "noun",
+    "image": "SCH/das_Geschenk.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "schön",
+    "article": "",
+    "type": "adjective",
+    "image": "SCH/schoen.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "schmutzig",
+    "article": "",
+    "type": "adjective",
+    "image": "SCH/schmutzig.jpg",
+    "category": "SCH"
+  },
+  {
+    "word": "schwarz",
+    "article": "",
+    "type": "adjective",
+    "image": "SCH/schwarz.jpg",
+    "category": "SCH"
+  }
+]
