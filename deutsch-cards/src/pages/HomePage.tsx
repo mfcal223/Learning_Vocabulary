@@ -1,6 +1,8 @@
+import type { VocabularyCategory } from "../data/vocabularyLoader"
+
 type HomePageProps = {
-  categories: string[]
-  onSelectCategory: (category: string) => void
+  categories: VocabularyCategory[]
+  onSelectCategory: (categoryId: VocabularyCategory["id"]) => void
 }
 
 export function HomePage({ categories, onSelectCategory }: HomePageProps) {
@@ -30,8 +32,8 @@ export function HomePage({ categories, onSelectCategory }: HomePageProps) {
       >
         {categories.map((category) => (
           <button
-            key={category}
-            onClick={() => onSelectCategory(category)}
+            key={category.id}
+            onClick={() => onSelectCategory(category.id)}
             style={{
               fontSize: "32px",
               padding: "24px 36px",
@@ -39,7 +41,7 @@ export function HomePage({ categories, onSelectCategory }: HomePageProps) {
               cursor: "pointer",
             }}
           >
-            Letra {category}
+            {category.label}
           </button>
         ))}
       </div>

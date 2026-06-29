@@ -1,0 +1,170 @@
+[
+  {
+    "word": "Dose",
+    "article": "die",
+    "type": "noun",
+    "image": "D/die_Dose.png"
+  },
+  {
+    "word": "Bild",
+    "article": "das",
+    "type": "noun",
+    "image": "D/das_Bild.png"
+  },
+  {
+    "word": "Dach",
+    "article": "das",
+    "type": "noun",
+    "image": "D/das_Dach.png"
+  },
+  {
+    "word": "Kind",
+    "article": "das",
+    "type": "noun",
+    "image": "D/das_Kind.png"
+  },
+  {
+    "word": "Mikado",
+    "article": "das",
+    "type": "noun",
+    "image": "D/das_Mikado.png"
+  },
+  {
+    "word": "Schaukelpferd",
+    "article": "das",
+    "type": "noun",
+    "image": "D/das_Schaukelpferd.png"
+  },
+  {
+    "word": "denken",
+    "article": "",
+    "type": "verb",
+    "image": "D/denken.png"
+  },
+  {
+    "word": "Delfin",
+    "article": "der",
+    "type": "noun",
+    "image": "D/der_Delfin.png"
+  },
+  {
+    "word": "Drachen",
+    "article": "der",
+    "type": "noun",
+    "image": "D/der_Drachen.png"
+  },
+  {
+    "word": "Hund",
+    "article": "der",
+    "type": "noun",
+    "image": "D/der_Hund.png"
+  },
+  {
+    "word": "Indianer",
+    "article": "der",
+    "type": "noun",
+    "image": "D/der_Indianer.png"
+  },
+  {
+    "word": "Kinderwagen",
+    "article": "der",
+    "type": "noun",
+    "image": "D/der_Kinderwagen.png"
+  },
+  {
+    "word": "Laden",
+    "article": "der",
+    "type": "noun",
+    "image": "D/der_Laden.png"
+  },
+  {
+    "word": "Wald",
+    "article": "der",
+    "type": "noun",
+    "image": "D/der_Wald.png"
+  },
+  {
+    "word": "dick",
+    "article": "",
+    "type": "adjective",
+    "image": "D/dick.png"
+  },
+  {
+    "word": "Dame",
+    "article": "die",
+    "type": "noun",
+    "image": "D/die_Dame.png"
+  },
+  {
+    "word": "Dusche",
+    "article": "die",
+    "type": "noun",
+    "image": "D/die_Dusche.png"
+  },
+  {
+    "word": "Eidechse",
+    "article": "die",
+    "type": "noun",
+    "image": "D/die_Eidechse.png"
+  },
+  {
+    "word": "Erdbeere",
+    "article": "die",
+    "type": "noun",
+    "image": "D/die_Erdbeere.png"
+  },
+  {
+    "word": "Mandarine",
+    "article": "die",
+    "type": "noun",
+    "image": "D/die_Mandarine.png"
+  },
+  {
+    "word": "Marmelade",
+    "article": "die",
+    "type": "noun",
+    "image": "D/die_Marmelade.png"
+  },
+  {
+    "word": "Nadel",
+    "article": "die",
+    "type": "noun",
+    "image": "D/die_Nadel.png"
+  },
+  {
+    "word": "Pyramide",
+    "article": "die",
+    "type": "noun",
+    "image": "D/die_Pyramide.png"
+  },
+  {
+    "word": "Schokolade",
+    "article": "die",
+    "type": "noun",
+    "image": "D/die_Schokolade.png"
+  },
+  {
+    "word": "duschen",
+    "article": "",
+    "type": "verb",
+    "image": "D/duschen.png"
+  },
+  {
+    "word": "dünn",
+    "article": "",
+    "type": "adjective",
+    "image": "D/dünn.png"
+  },
+  {
+    "word": "gesund",
+    "article": "",
+    "type": "adjective",
+    "image": "D/gesund.png"
+  },
+  {
+    "word": "rund",
+    "article": "",
+    "type": "adjective",
+    "image": "D/rund.png"
+  }
+]

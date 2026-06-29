@@ -1,0 +1,206 @@
+[
+  {
+    "word": "Haus",
+    "article": "das",
+    "type": "noun",
+    "image": "H/das_Haus.jpg"
+  },
+  {
+    "word": "Hund",
+    "article": "der",
+    "type": "noun",
+    "image": "H/der_Hund.jpg"
+  },
+  {
+    "word": "Eichhörnchen",
+    "article": "das",
+    "type": "noun",
+    "image": "H/das_Eichhörnchen.png"
+  },
+  {
+    "word": "Herz",
+    "article": "das",
+    "type": "noun",
+    "image": "H/das_Herz.png"
+  },
+  {
+    "word": "Holz",
+    "article": "das",
+    "type": "noun",
+    "image": "H/das_Holz.png"
+  },
+  {
+    "word": "Huhn",
+    "article": "das",
+    "type": "noun",
+    "image": "H/das_Huhn.png"
+  },
+  {
+    "word": "Hai",
+    "article": "der",
+    "type": "noun",
+    "image": "H/der_Hai.png"
+  },
+  {
+    "word": "Hals",
+    "article": "der",
+    "type": "noun",
+    "image": "H/der_Hals.png"
+  },
+  {
+    "word": "Hammer",
+    "article": "der",
+    "type": "noun",
+    "image": "H/der_Hammer.png"
+  },
+  {
+    "word": "Hamster",
+    "article": "der",
+    "type": "noun",
+    "image": "H/der_Hamster.png"
+  },
+  {
+    "word": "Helm",
+    "article": "der",
+    "type": "noun",
+    "image": "H/der_Helm.png"
+  },
+  {
+    "word": "Himmel",
+    "article": "der",
+    "type": "noun",
+    "image": "H/der_Himmel.png"
+  },
+  {
+    "word": "Honig",
+    "article": "der",
+    "type": "noun",
+    "image": "H/der_Honig.png"
+  },
+  {
+    "word": "Hut",
+    "article": "der",
+    "type": "noun",
+    "image": "H/der_Hut.png"
+  },
+  {
+    "word": "Wasserhahn",
+    "article": "der",
+    "type": "noun",
+    "image": "H/der_Wasserhahn.png"
+  },
+  {
+    "word": "Fernseher",
+    "article": "der",
+    "type": "noun",
+    "image": "H/der_Fernseher.png"
+  },
+  {
+    "word": "Haare",
+    "article": "die",
+    "type": "noun",
+    "image": "H/die_Haare.png"
+  },
+  {
+    "word": "Hand",
+    "article": "die",
+    "type": "noun",
+    "image": "H/die_Hand.png"
+  },
+  {
+    "word": "Heft",
+    "article": "das",
+    "type": "noun",
+    "image": "H/das_Heft.png"
+  },
+  {
+    "word": "Heizung",
+    "article": "die",
+    "type": "noun",
+    "image": "H/die_Heizung.png"
+  },
+  {
+    "word": "Hexe",
+    "article": "die",
+    "type": "noun",
+    "image": "H/die_Hexe.png"
+  },
+  {
+    "word": "Hundehüte",
+    "article": "die",
+    "type": "noun",
+    "image": "H/die_Hundehüte.png"
+  },
+  {
+    "word": "Möhre",
+    "article": "die",
+    "type": "noun",
+    "image": "H/die_Möhre.png"
+  },
+  {
+    "word": "fahren",
+    "article": "",
+    "type": "verb",
+    "image": "H/fahren.png"
+  },
+  {
+    "word": "halten",
+    "article": "",
+    "type": "verb",
+    "image": "H/halten.png"
+  },
+  {
+    "word": "heiß",
+    "article": "",
+    "type": "adjective",
+    "image": "H/heiB.png"
+  },
+  {
+    "word": "helfen",
+    "article": "",
+    "type": "verb",
+    "image": "H/helfen.png"
+  },
+  {
+    "word": "hell",
+    "article": "",
+    "type": "adjective",
+    "image": "H/hell.png"
+  },
+  {
+    "word": "hinter",
+    "article": "",
+    "type": "preposition",
+    "image": "H/hinter.png"
+  },
+  {
+    "word": "holen",
+    "article": "",
+    "type": "verb",
+    "image": "H/holen.png"
+  },
+  {
+    "word": "hundert",
+    "article": "",
+    "type": "number",
+    "image": "H/hundert.png"
+  },
+  {
+    "word": "hungrig",
+    "article": "",
+    "type": "adjective",
+    "image": "H/hungrig.png"
+  },
+  {
+    "word": "husten",
+    "article": "",
+    "type": "verb",
+    "image": "H/husten.png"
+  },
+  {
+    "word": "sehen",
+    "article": "",
+    "type": "verb",
+    "image": "H/sehen.png"
+  }
+]

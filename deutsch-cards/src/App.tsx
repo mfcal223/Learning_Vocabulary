@@ -1,27 +1,23 @@
 import { useState } from "react"
-import rawVocabularyData from "./data/vocabulary.json"
-import type { VocabularyItem } from "./types/vocabulary"
+import {
+  vocabularyCategories,
+  vocabularyByCategory,
+  type VocabularyCategory,
+} from "./data/vocabularyLoader"
 import { HomePage } from "./pages/HomePage"
 import { GamePage } from "./pages/GamePage"
 
-const vocabularyData = rawVocabularyData as VocabularyItem[]
-
 function App() {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
-
-  const categories = Array.from(
-    new Set(vocabularyData.map((item) => item.category))
-  )
+  const [selectedCategory, setSelectedCategory] =
+    useState<VocabularyCategory["id"] | null>(null)
 
   if (selectedCategory) {
-    const filteredVocabulary = vocabularyData.filter(
-      (item) => item.category === selectedCategory
-    )
+    const selectedVocabulary = vocabularyByCategory[selectedCategory]
 
     return (
       <GamePage
         category={selectedCategory}
-        vocabulary={filteredVocabulary}
+        vocabulary={selectedVocabulary}
         onBack={() => setSelectedCategory(null)}
       />
     )
@@ -29,7 +25,7 @@ function App() {
 
   return (
     <HomePage
-      categories={categories}
+      categories={vocabularyCategories}
       onSelectCategory={setSelectedCategory}
     />
   )

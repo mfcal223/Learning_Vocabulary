@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react"
-import type { VocabularyItem } from "../types/vocabulary"
+import type {
+  VocabularyCategory,
+  VocabularyItem,
+} from "../data/vocabularyLoader"
 
 type GamePageProps = {
-  category: string
+  category: VocabularyCategory["id"]
   vocabulary: VocabularyItem[]
   onBack: () => void
 }
@@ -53,6 +56,24 @@ export function GamePage({ category, vocabulary, onBack }: GamePageProps) {
     setCurrentCard(null)
   }
 
+  function speakWord() {
+    if (!currentCard) {
+      return
+    }
+
+    const textToSpeak = currentCard.article
+      ? `${currentCard.article} ${currentCard.word}`
+      : currentCard.word
+
+    const utterance = new SpeechSynthesisUtterance(textToSpeak)
+
+    utterance.lang = "de-DE"
+    utterance.rate = 0.8
+
+    window.speechSynthesis.cancel()
+    window.speechSynthesis.speak(utterance)
+  }
+
   useEffect(() => {
     restartGame()
   }, [category])
@@ -95,7 +116,7 @@ export function GamePage({ category, vocabulary, onBack }: GamePageProps) {
         </h2>
 
         <p>
-          Practicaste {vocabulary.length} palabras de la letra {category}.
+          Practicaste {vocabulary.length} palabras de la categoría {category}.
         </p>
 
         <button onClick={restartGame}>Jugar otra vez</button>
@@ -109,24 +130,6 @@ export function GamePage({ category, vocabulary, onBack }: GamePageProps) {
     return <p>Cargando...</p>
   }
 
-  /* Use SpeechSynthesis*/
-  function speakWord() {
-    if (!currentCard) {
-        return
-    }
-
-    const textToSpeak = currentCard.article
-        ? `${currentCard.article} ${currentCard.word}`
-        : currentCard.word
-
-    const utterance = new SpeechSynthesisUtterance(textToSpeak)
-
-    utterance.lang = "de-DE"
-    utterance.rate = 0.8
-
-    window.speechSynthesis.cancel()
-    window.speechSynthesis.speak(utterance)
-    }
   return (
     <main
       style={{
@@ -140,7 +143,7 @@ export function GamePage({ category, vocabulary, onBack }: GamePageProps) {
     >
       <button onClick={onBack}>← Volver</button>
 
-      <h1>Letra {category}</h1>
+      <h1>Categoría {category}</h1>
 
       <p>
         Palabra {answeredCount + 1} de {vocabulary.length}
@@ -169,9 +172,8 @@ export function GamePage({ category, vocabulary, onBack }: GamePageProps) {
         </div>
       )}
 
-      <button onClick={speakWord}>
-        🔊 Escuchar palabra
-      </button>
+      <button onClick={speakWord}>🔊 Escuchar palabra</button>
+
       <div
         style={{
           display: "flex",
@@ -180,7 +182,6 @@ export function GamePage({ category, vocabulary, onBack }: GamePageProps) {
           justifyContent: "center",
         }}
       >
-
         <button onClick={() => handleAnswer(10)}>
           Respuesta correcta
         </button>
