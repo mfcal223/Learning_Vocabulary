@@ -21,3 +21,17 @@ Images used in this project were AI generated, self drawn or obtained from free-
 [itsybitsyfun](https://www.itsybitsyfun.com)
 [gratis-malvorlagen.de](https://www.gratis-malvorlagen.de/)
 raisingourkids.com
+
+----
+
+# Juego de verbos 
+
+Reglas propuestas
+1. Al iniciar, se generan aleatoriamente 15 combinaciones únicas.
+2. Cada ejercicio permanece hasta que se responda correctamente.
+3. Primer intento correcto: +10 puntos.
+4. Cada respuesta incorrecta: −3 puntos.
+5. Noch einmal permite volver a intentar la misma combinación.
+6. Cuando finalmente acierta, cuenta como 1 de 15 completados y aparece Weiter.
+7. Después del ejercicio 15 aparece una pantalla con el puntaje final.
+

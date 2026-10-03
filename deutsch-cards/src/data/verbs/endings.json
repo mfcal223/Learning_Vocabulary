@@ -1,0 +1,74 @@
+[
+  {
+    "infinitive": "malen",
+    "stem": "mal",
+    "ich": "male",
+    "thirdPerson": "malt",
+    "plural": "malen",
+    "english": "to paint / draw",
+    "spanish": "pintar / dibujar"
+  },
+  {
+    "infinitive": "tanzen",
+    "stem": "tanz",
+    "ich": "tanze",
+    "thirdPerson": "tanzt",
+    "plural": "tanzen",
+    "english": "to dance",
+    "spanish": "bailar"
+  },
+  {
+    "infinitive": "zeigen",
+    "stem": "zeig",
+    "ich": "zeige",
+    "thirdPerson": "zeigt",
+    "plural": "zeigen",
+    "english": "to show",
+    "spanish": "mostrar"
+  },
+  {
+    "infinitive": "schreiben",
+    "stem": "schreib",
+    "ich": "schreibe",
+    "thirdPerson": "schreibt",
+    "plural": "schreiben",
+    "english": "to write",
+    "spanish": "escribir"
+  },
+  {
+    "infinitive": "ziehen",
+    "stem": "zieh",
+    "ich": "ziehe",
+    "thirdPerson": "zieht",
+    "plural": "ziehen",
+    "english": "to pull",
+    "spanish": "tirar"
+  },
+  {
+    "infinitive": "schwimmen",
+    "stem": "schwimm",
+    "ich": "schwimme",
+    "thirdPerson": "schwimmt",
+    "plural": "schwimmen",
+    "english": "to swim",
+    "spanish": "nadar"
+  },
+  {
+    "infinitive": "schaukeln",
+    "stem": "schaukel",
+    "ich": "schaukele",
+    "thirdPerson": "schaukelt",
+    "plural": "schaukeln",
+    "english": "to swing",
+    "spanish": "columpiarse"
+  },
+  {
+    "infinitive": "putzen",
+    "stem": "putz",
+    "ich": "putze",
+    "thirdPerson": "putzt",
+    "plural": "putzen",
+    "english": "to clean",
+    "spanish": "limpiar"
+  }
+]
