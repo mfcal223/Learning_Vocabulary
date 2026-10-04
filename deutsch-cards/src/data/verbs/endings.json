@@ -1,6 +1,7 @@
 [
   {
     "infinitive": "malen",
+    "exerciseType": "ending",
     "stem": "mal",
     "ich": "male",
     "thirdPerson": "malt",
@@ -10,6 +11,7 @@
   },
   {
     "infinitive": "tanzen",
+    "exerciseType": "ending",
     "stem": "tanz",
     "ich": "tanze",
     "thirdPerson": "tanzt",
@@ -19,6 +21,7 @@
   },
   {
     "infinitive": "zeigen",
+    "exerciseType": "ending",
     "stem": "zeig",
     "ich": "zeige",
     "thirdPerson": "zeigt",
@@ -28,6 +31,7 @@
   },
   {
     "infinitive": "schreiben",
+    "exerciseType": "ending",
     "stem": "schreib",
     "ich": "schreibe",
     "thirdPerson": "schreibt",
@@ -37,6 +41,7 @@
   },
   {
     "infinitive": "ziehen",
+    "exerciseType": "ending",
     "stem": "zieh",
     "ich": "ziehe",
     "thirdPerson": "zieht",
@@ -46,6 +51,7 @@
   },
   {
     "infinitive": "schwimmen",
+    "exerciseType": "ending",
     "stem": "schwimm",
     "ich": "schwimme",
     "thirdPerson": "schwimmt",
@@ -54,21 +60,67 @@
     "spanish": "nadar"
   },
   {
-    "infinitive": "schaukeln",
-    "stem": "schaukel",
-    "ich": "schaukele",
-    "thirdPerson": "schaukelt",
-    "plural": "schaukeln",
-    "english": "to swing",
-    "spanish": "columpiarse"
-  },
-  {
     "infinitive": "putzen",
+    "exerciseType": "ending",
     "stem": "putz",
     "ich": "putze",
     "thirdPerson": "putzt",
     "plural": "putzen",
     "english": "to clean",
     "spanish": "limpiar"
+  },
+  {
+    "infinitive": "schaukeln",
+    "exerciseType": "fullForm",
+    "ich": "schaukle",
+    "thirdPerson": "schaukelt",
+    "plural": "schaukeln",
+    "english": "to swing",
+    "spanish": "columpiarse"
+  },
+  {
+    "infinitive": "schlafen",
+    "exerciseType": "fullForm",
+    "ich": "schlafe",
+    "thirdPerson": "schläft",
+    "plural": "schlafen",
+    "english": "to sleep",
+    "spanish": "dormir"
+  },
+  {
+    "infinitive": "lesen",
+    "exerciseType": "fullForm",
+    "ich": "lese",
+    "thirdPerson": "liest",
+    "plural": "lesen",
+    "english": "to read",
+    "spanish": "leer"
+  },
+  {
+    "infinitive": "essen",
+    "exerciseType": "fullForm",
+    "ich": "esse",
+    "thirdPerson": "isst",
+    "plural": "essen",
+    "english": "to eat",
+    "spanish": "comer"
+  },
+  {
+    "infinitive": "sein",
+    "exerciseType": "fullForm",
+    "ich": "bin",
+    "thirdPerson": "ist",
+    "plural": "sind",
+    "english": "to be",
+    "spanish": "ser / estar"
+  },
+  {
+    "infinitive": "haben",
+    "exerciseType": "fullForm",
+    "ich": "habe",
+    "thirdPerson": "hat",
+    "plural": "haben",
+    "english": "to have",
+    "spanish": "tener"
   }
 ]
