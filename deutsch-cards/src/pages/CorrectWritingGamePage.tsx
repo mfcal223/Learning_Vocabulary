@@ -2,6 +2,482 @@ import { useState } from "react"
 import correctWritingData from "../data/revision/correctWriting.json"
 import type { CorrectWritingExercise } from "../types/revision"
 
+import { GameHeader } from "../components/GameHeader"
+import { GameHelp } from "../components/GameHelp"
+import { gameHelp } from "../data/help/gameHelp"
+
+type CorrectWritingGamePageProps = {
+  onBack: () => void
+}
+
+type Feedback = "correct" | "incorrect" | null
+
+function shuffle<T>(items: T[]): T[] {
+  const shuffled = [...items]
+
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const randomIndex =
+      Math.floor(Math.random() * (i + 1))
+
+    const temporary = shuffled[i]
+    shuffled[i] = shuffled[randomIndex]
+    shuffled[randomIndex] = temporary
+  }
+
+  return shuffled
+}
+
+export function CorrectWritingGamePage({
+  onBack,
+}: CorrectWritingGamePageProps) {
+  const allExercises =
+    correctWritingData as CorrectWritingExercise[]
+
+  const [exercises, setExercises] = useState<
+    CorrectWritingExercise[]
+  >(() => shuffle(allExercises))
+
+  const [
+    currentExerciseIndex,
+    setCurrentExerciseIndex,
+  ] = useState(0)
+
+  const [userAnswer, setUserAnswer] =
+    useState("")
+
+  const [feedback, setFeedback] =
+    useState<Feedback>(null)
+
+  const [showHelp, setShowHelp] =
+    useState(false)
+
+  const [score, setScore] =
+    useState(0)
+
+  const [gameFinished, setGameFinished] =
+    useState(false)
+
+  const exercise =
+    exercises[currentExerciseIndex]
+
+  function handleCheck() {
+    const answer = userAnswer.trim()
+
+    if (answer === exercise.answer) {
+      setFeedback("correct")
+      setScore(
+        (currentScore) =>
+          currentScore + 10
+      )
+    } else {
+      setFeedback("incorrect")
+      setScore(
+        (currentScore) =>
+          currentScore - 3
+      )
+    }
+  }
+
+  function handleRetry() {
+    setUserAnswer("")
+    setFeedback(null)
+  }
+
+  function handleNext() {
+    if (
+      currentExerciseIndex ===
+      exercises.length - 1
+    ) {
+      setGameFinished(true)
+      return
+    }
+
+    setCurrentExerciseIndex(
+      (currentIndex) =>
+        currentIndex + 1
+    )
+
+    setUserAnswer("")
+    setFeedback(null)
+  }
+
+  function handleRestart() {
+    const newExercises =
+      shuffle(allExercises)
+
+    setExercises(newExercises)
+    setCurrentExerciseIndex(0)
+    setUserAnswer("")
+    setFeedback(null)
+    setScore(0)
+    setGameFinished(false)
+  }
+
+  function handleKeyDown(
+    event: React.KeyboardEvent<HTMLInputElement>
+  ) {
+    if (
+      event.key === "Enter" &&
+      feedback === null &&
+      userAnswer.trim() !== ""
+    ) {
+      handleCheck()
+    }
+  }
+
+  if (gameFinished) {
+    return (
+      <>
+        <GameHeader
+          title="Schreibe richtig"
+          onBack={onBack}
+          onHelp={() =>
+            setShowHelp(true)
+          }
+        />
+
+        {showHelp && (
+          <GameHelp
+            content={
+              gameHelp.correctWriting
+            }
+            onClose={() =>
+              setShowHelp(false)
+            }
+          />
+        )}
+
+        <main
+          style={{
+            minHeight:
+              "calc(100vh - 80px)",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "24px",
+            padding: "24px",
+            textAlign: "center",
+          }}
+        >
+          <h2
+            style={{
+              margin: 0,
+              fontSize: "36px",
+            }}
+          >
+            🎉 Fertig!
+          </h2>
+
+          <p
+            style={{
+              margin: 0,
+              fontSize: "22px",
+            }}
+          >
+            Dein Ergebnis:
+          </p>
+
+          <strong
+            style={{
+              fontSize: "52px",
+              color: "#22c55e",
+            }}
+          >
+            {score} /{" "}
+            {exercises.length * 10}
+          </strong>
+
+          <p>
+            {exercises.length} Übungen geschafft!
+          </p>
+
+          <button
+            onClick={handleRestart}
+            style={{
+              fontSize: "20px",
+              padding: "12px 20px",
+              cursor: "pointer",
+            }}
+          >
+            Noch einmal spielen
+          </button>
+        </main>
+      </>
+    )
+  }
+
+  return (
+    <>
+      <GameHeader
+        title="Schreibe richtig"
+        onBack={onBack}
+        onHelp={() =>
+          setShowHelp(true)
+        }
+      />
+
+      {showHelp && (
+        <GameHelp
+          content={
+            gameHelp.correctWriting
+          }
+          onClose={() =>
+            setShowHelp(false)
+          }
+        />
+      )}
+
+      <main
+        style={{
+          minHeight:
+            "calc(100vh - 80px)",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          padding: "28px 24px",
+          boxSizing: "border-box",
+        }}
+      >
+        {/* Progress and score */}
+        <div
+          style={{
+            width: "min(720px, 92vw)",
+            display: "flex",
+            justifyContent:
+              "space-between",
+            alignItems: "center",
+            marginBottom: "28px",
+            fontSize: "18px",
+          }}
+        >
+          <span>
+            Übung{" "}
+            {currentExerciseIndex + 1} /{" "}
+            {exercises.length}
+          </span>
+
+          <strong>
+            Punkte: {score}
+          </strong>
+        </div>
+
+        {/* Exercise card */}
+        <section
+          style={{
+            width: "min(720px, 92vw)",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: "26px",
+
+            padding: "32px 24px",
+
+            border:
+              "1px solid rgba(255, 255, 255, 0.12)",
+
+            borderRadius: "18px",
+
+            backgroundColor:
+              "rgba(255, 255, 255, 0.025)",
+          }}
+        >
+          <p
+            style={{
+              margin: 0,
+              fontSize: "18px",
+              opacity: 0.85,
+            }}
+          >
+            Schreibe den Satz richtig.
+          </p>
+
+          {/* Original sentence */}
+          <div
+            style={{
+              width: "100%",
+              textAlign: "center",
+            }}
+          >
+            <div
+              style={{
+                marginBottom: "10px",
+                fontSize: "15px",
+                opacity: 0.6,
+              }}
+            >
+              Satz
+            </div>
+
+            <div
+              style={{
+                fontSize: "32px",
+                fontWeight: "bold",
+                overflowWrap: "anywhere",
+              }}
+            >
+              {exercise.prompt}
+            </div>
+          </div>
+
+          {/* User answer */}
+          <div
+            style={{
+              width: "100%",
+              textAlign: "center",
+            }}
+          >
+            <div
+              style={{
+                marginBottom: "10px",
+                fontSize: "15px",
+                opacity: 0.6,
+              }}
+            >
+              Deine Antwort
+            </div>
+
+            <input
+              type="text"
+              value={userAnswer}
+              onChange={(event) =>
+                setUserAnswer(
+                  event.target.value
+                )
+              }
+              onKeyDown={
+                handleKeyDown
+              }
+              disabled={
+                feedback !== null
+              }
+              autoComplete="off"
+              autoCorrect="off"
+              spellCheck={false}
+              autoFocus
+              style={{
+                width: "min(620px, 90%)",
+                boxSizing: "border-box",
+                fontSize: "26px",
+                padding: "14px 18px",
+                borderRadius: "10px",
+                border:
+                  "2px solid rgba(255, 255, 255, 0.25)",
+                textAlign: "center",
+              }}
+            />
+          </div>
+
+          {feedback === null && (
+            <button
+              onClick={handleCheck}
+              disabled={
+                userAnswer.trim() === ""
+              }
+              style={{
+                fontSize: "20px",
+                padding: "12px 24px",
+
+                cursor:
+                  userAnswer.trim() !== ""
+                    ? "pointer"
+                    : "default",
+              }}
+            >
+              Prüfen
+            </button>
+          )}
+        </section>
+
+        {/* Incorrect feedback */}
+        {feedback === "incorrect" && (
+          <section
+            style={{
+              width:
+                "min(720px, 92vw)",
+              marginTop: "28px",
+              textAlign: "center",
+            }}
+          >
+            <p
+              style={{
+                margin: 0,
+                fontSize: "24px",
+              }}
+            >
+              ❌ Nicht richtig.
+            </p>
+
+            <button
+              onClick={handleRetry}
+              style={{
+                marginTop: "20px",
+                fontSize: "20px",
+                padding: "12px 20px",
+                cursor: "pointer",
+              }}
+            >
+              Noch einmal
+            </button>
+          </section>
+        )}
+
+        {/* Correct feedback */}
+        {feedback === "correct" && (
+          <section
+            style={{
+              width:
+                "min(720px, 92vw)",
+              marginTop: "28px",
+              textAlign: "center",
+            }}
+          >
+            <p
+              style={{
+                margin: 0,
+                fontSize: "24px",
+              }}
+            >
+              ✅ Richtig!
+            </p>
+
+            <strong
+              style={{
+                display: "block",
+                marginTop: "20px",
+                fontSize: "32px",
+                color: "#22c55e",
+              }}
+            >
+              {exercise.answer}
+            </strong>
+
+            <button
+              onClick={handleNext}
+              style={{
+                marginTop: "24px",
+                fontSize: "20px",
+                padding: "12px 24px",
+                cursor: "pointer",
+              }}
+            >
+              {currentExerciseIndex ===
+              exercises.length - 1
+                ? "Ergebnis"
+                : "Weiter"}
+            </button>
+          </section>
+        )}
+      </main>
+    </>
+  )
+}
+
+/*
+import { useState } from "react"
+import correctWritingData from "../data/revision/correctWriting.json"
+import type { CorrectWritingExercise } from "../types/revision"
+
 type CorrectWritingGamePageProps = {
   onBack: () => void
 }
@@ -315,3 +791,4 @@ export function CorrectWritingGamePage({
     </main>
   )
 }
+*/
