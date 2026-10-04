@@ -6,7 +6,7 @@ import {
 } from "./data/vocabularyLoader"
 
 import { HomePage } from "./pages/HomePage"
-import { GamePage } from "./pages/GamePage"
+import { VocabularyGamePage } from "./pages/VocabularyGamePage"
 import { VerbGamePage } from "./pages/VerbGamePage"
 import { ScrambledSentenceGamePage } from "./pages/ScrambledSentenceGamePage"
 import { CorrectWritingGamePage } from "./pages/CorrectWritingGamePage"
@@ -34,7 +34,7 @@ function App() {
       vocabularyByCategory[selectedCategory]
 
     return (
-      <GamePage
+      <VocabularyGamePage
         category={selectedCategory}
         vocabulary={selectedVocabulary}
         onBack={() => {

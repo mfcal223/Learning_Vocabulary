@@ -1,6 +1,7 @@
 import type { GameHelpContent } from "../../types/help"
 
 type GameHelpCollection = {
+  vocabulary: GameHelpContent
   verbs: GameHelpContent
   scrambledSentences: GameHelpContent
   correctWriting: GameHelpContent
@@ -8,6 +9,47 @@ type GameHelpCollection = {
 }
 
 export const gameHelp: GameHelpCollection = {
+  vocabulary: {
+    title: "Wortschatz",
+    subtitle: "Vocabulario · Wortschatz",
+    sections: [
+      {
+        heading: "🇩🇪 Deutsch",
+        lines: [
+          "Sieh dir das Bild an und sage das deutsche Wort.",
+          "Vergiss den Artikel nicht: der, die oder das.",
+        ],
+      },
+      {
+        heading: "Die Knöpfe",
+        lines: [
+          "👁️ Antwort zeigen → zeigt das richtige Wort",
+          "🔊 Wort anhören → spielt die Aussprache ab",
+          "✅ Richtig → Wort und Artikel sind richtig · +10",
+          "🟡 Artikel falsch → Wort richtig, Artikel falsch · +5",
+          "❌ Falsch → Wort ist nicht richtig · 0",
+        ],
+      },
+      {
+        heading: "🇪🇸 Español",
+        lines: [
+          "Mira la imagen y di la palabra en alemán.",
+          "No olvides el artículo: der, die o das.",
+        ],
+      },
+      {
+        heading: "Los botones",
+        lines: [
+          "👁️ Mostrar respuesta → muestra la palabra correcta",
+          "🔊 Escuchar palabra → reproduce la pronunciación",
+          "✅ Correcto → palabra y artículo correctos · +10",
+          "🟡 Artículo incorrecto → palabra correcta, artículo incorrecto · +5",
+          "❌ Incorrecto → la palabra no es correcta · 0",
+        ],
+      },
+    ],
+  },
+
   verbs: {
     title: "Verb-Endungen",
     subtitle: "Terminaciones verbales · Verb-Endungen",
