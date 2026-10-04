@@ -1,0 +1,38 @@
+[
+  {
+    "id": "schuettel-001",
+    "answer": [
+      "Ich",
+      "schneide",
+      "die",
+      "Haare",
+      "mit",
+      "der",
+      "Schere",
+      "."
+    ]
+  },
+  {
+    "id": "schuettel-002",
+    "answer": [
+      "Das",
+      "Schwein",
+      "frisst",
+      "den",
+      "Salat",
+      "."
+    ]
+  },
+  {
+    "id": "schuettel-003",
+    "answer": [
+      "Der",
+      "Schwan",
+      "schwimmt",
+      "auf",
+      "dem",
+      "See",
+      "."
+    ]
+  }
+]

@@ -1,7 +1,7 @@
-import categories from "./vocabulary.json"
-import hWords from "./H.json"
-import dWords from "./D.json"
-import schWords from "./SCH.json"
+import categories from "./vocabulary/vocabulary.json"
+import hWords from "./vocabulary/H.json"
+import dWords from "./vocabulary/D.json"
+import schWords from "./vocabulary/SCH.json"
 
 export type VocabularyCategory = {
   id: "H" | "D" | "SCH"
