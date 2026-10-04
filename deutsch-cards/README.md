@@ -74,7 +74,4 @@ export default defineConfig([
 
 ```
 
----
 
-Pendientes:
-- juego de escribir correctamente : agregar mas ejemplos , agregarle puntaje, marcar el error (?)

@@ -35,3 +35,9 @@ Reglas propuestas
 6. Cuando finalmente acierta, cuenta como 1 de 15 completados y aparece Weiter.
 7. Después del ejercicio 15 aparece una pantalla con el puntaje final.
 
+---
+
+Pendientes:
+- juego de escribir correctamente : agregar mas ejemplos , agregarle puntaje, marcar el error (?)
+
+- juegos de corregir oraciones o minusculas,etc .... hay que randomizar los eejercicios 

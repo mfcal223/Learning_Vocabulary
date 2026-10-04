@@ -99,6 +99,9 @@ export function CapitalizationGamePage({
   const [feedback, setFeedback] =
     useState<Feedback>(null)
 
+  const [confirmedIndexes, setConfirmedIndexes] =
+   useState<number[]>([])
+
   const [score, setScore] = useState(0)
 
   const [gameFinished, setGameFinished] =
@@ -107,48 +110,82 @@ export function CapitalizationGamePage({
   const exercise = exercises[currentExerciseIndex]
 
   function handleCharacterClick(index: number) {
-    if (feedback !== null) {
-      return
+    if (
+        feedback !== null ||
+        confirmedIndexes.includes(index)
+    ) {
+        return
     }
 
     const character = characters[index]
 
     if (!isLetter(character)) {
-      return
+        return
     }
 
     setCharacters((currentCharacters) =>
-      currentCharacters.map((currentCharacter, currentIndex) => {
+        currentCharacters.map((currentCharacter, currentIndex) => {
         if (currentIndex !== index) {
-          return currentCharacter
+            return currentCharacter
         }
 
         return toggleCharacter(currentCharacter)
-      })
+        })
     )
-  }
+    }
 
   function handleCheck() {
     const currentSentence = characters.join("")
 
+    const correctlySolvedIndexes =
+        characters.reduce<number[]>(
+        (indexes, character, index) => {
+            const neededToChange =
+            exercise.prompt[index] !== exercise.answer[index]
+
+            const isCorrect =
+            character === exercise.answer[index]
+
+            if (neededToChange && isCorrect) {
+            indexes.push(index)
+            }
+
+            return indexes
+        },
+        []
+        )
+
+    setConfirmedIndexes(correctlySolvedIndexes)
+
     if (currentSentence === exercise.answer) {
-      setFeedback("correct")
-      setScore((currentScore) => currentScore + 10)
+        setFeedback("correct")
+        setScore((currentScore) => currentScore + 10)
     } else {
-      setFeedback("incorrect")
-      setScore((currentScore) => currentScore - 3)
+        setFeedback("incorrect")
+        setScore((currentScore) => currentScore - 3)
     }
-  }
+    }
 
   function handleRetry() {
-    setCharacters(exercise.prompt.split(""))
+    const resetCharacters =
+        exercise.prompt.split("").map(
+        (character, index) => {
+            if (confirmedIndexes.includes(index)) {
+            return exercise.answer[index]
+            }
+
+            return character
+        }
+        )
+
+    setCharacters(resetCharacters)
     setFeedback(null)
-  }
+    }
 
   function handleNext() {
     if (currentExerciseIndex === exercises.length - 1) {
-      setGameFinished(true)
-      return
+        setGameFinished(true)
+        return
     }
 
     const nextExerciseIndex = currentExerciseIndex + 1
@@ -156,8 +193,9 @@ export function CapitalizationGamePage({
 
     setCurrentExerciseIndex(nextExerciseIndex)
     setCharacters(nextExercise.prompt.split(""))
+    setConfirmedIndexes([])
     setFeedback(null)
-  }
+    }
 
   function handleRestart() {
     const newExercises = shuffle(allExercises)
@@ -165,6 +203,7 @@ export function CapitalizationGamePage({
     setExercises(newExercises)
     setCurrentExerciseIndex(0)
     setCharacters(newExercises[0].prompt.split(""))
+    setConfirmedIndexes([])
     setFeedback(null)
     setScore(0)
     setGameFinished(false)
@@ -289,33 +328,45 @@ export function CapitalizationGamePage({
             }}
           >
             {word.map((cell) => {
-              const clickable =
-                isLetter(cell.character) &&
-                feedback === null
+                const confirmed =
+                   confirmedIndexes.includes(cell.index)
 
-              return (
-                <button
-                  key={cell.index}
-                  onClick={() =>
-                    handleCharacterClick(cell.index)
-                  }
-                  disabled={!clickable}
-                  style={{
-                    width: "46px",
-                    height: "54px",
-                    padding: 0,
-                    fontSize: "28px",
-                    fontWeight: "bold",
-                    borderRadius: "6px",
-                    cursor: clickable
-                      ? "pointer"
-                      : "default",
-                  }}
-                >
-                  {cell.character}
-                </button>
-              )
-            })}
+                const clickable =
+                   isLetter(cell.character) &&
+                   feedback === null &&
+                   !confirmed
+
+                return (
+                 <button
+                    key={cell.index}
+                    onClick={() =>
+                        handleCharacterClick(cell.index)
+                    }
+                    disabled={!clickable}
+                    style={{
+                        width: "46px",
+                        height: "54px",
+                        padding: 0,
+                        fontSize: "28px",
+                        fontWeight: "bold",
+                        borderRadius: "6px",
+                        cursor: clickable
+                        ? "pointer"
+                        : "default",
+
+                        backgroundColor: confirmed
+                        ? "#22c55e"
+                        : undefined,
+
+                        color: confirmed
+                        ? "white"
+                        : undefined,
+                    }}
+                    >
+                    {cell.character}
+                    </button>
+                )
+              })}
           </div>
         ))}
       </div>
