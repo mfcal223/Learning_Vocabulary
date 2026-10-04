@@ -1,0 +1,324 @@
+[
+  {
+    "word": "Kamel",
+    "article": "das",
+    "type": "noun",
+    "image": "K/das_Kamel.png"
+  },
+  {
+    "word": "Kino",
+    "article": "das",
+    "type": "noun",
+    "image": "K/das_Kino.png"
+  },
+  {
+    "word": "Kissen",
+    "article": "das",
+    "type": "noun",
+    "image": "K/das_Kissen.png"
+  },
+  {
+    "word": "Kleid",
+    "article": "das",
+    "type": "noun",
+    "image": "K/das_Kleid.png"
+  },
+  {
+    "word": "Krokodil",
+    "article": "das",
+    "type": "noun",
+    "image": "K/das_Krokodil.png"
+  },
+  {
+    "word": "Känguru",
+    "article": "das",
+    "type": "noun",
+    "image": "K/das_Känguru.png"
+  },
+  {
+    "word": "Paket",
+    "article": "das",
+    "type": "noun",
+    "image": "K/das_Paket.png"
+  },
+
+  {
+    "word": "Kaktus",
+    "article": "der",
+    "type": "noun",
+    "image": "K/der_Kaktus.png"
+  },
+  {
+    "word": "Kamm",
+    "article": "der",
+    "type": "noun",
+    "image": "K/der_Kamm.png"
+  },
+  {
+    "word": "Keks",
+    "article": "der",
+    "type": "noun",
+    "image": "K/der_Keks.png"
+  },
+  {
+    "word": "Keller",
+    "article": "der",
+    "type": "noun",
+    "image": "K/der_Keller.png"
+  },
+  {
+    "word": "Knochen",
+    "article": "der",
+    "type": "noun",
+    "image": "K/der_Knochen.png"
+  },
+  {
+    "word": "Knopf",
+    "article": "der",
+    "type": "noun",
+    "image": "K/der_Knopf.png"
+  },
+  {
+    "word": "Koch",
+    "article": "der",
+    "type": "noun",
+    "image": "K/der_Koch.png"
+  },
+  {
+    "word": "Koffer",
+    "article": "der",
+    "type": "noun",
+    "image": "K/der_Koffer.png"
+  },
+  {
+    "word": "Korb",
+    "article": "der",
+    "type": "noun",
+    "image": "K/der_Korb.png"
+  },
+  {
+    "word": "Kuss",
+    "article": "der",
+    "type": "noun",
+    "image": "K/der_Kuss.png"
+  },
+  {
+    "word": "Käse",
+    "article": "der",
+    "type": "noun",
+    "image": "K/der_Käse.png"
+  },
+  {
+    "word": "König",
+    "article": "der",
+    "type": "noun",
+    "image": "K/der_König.png"
+  },
+  {
+    "word": "Onkel",
+    "article": "der",
+    "type": "noun",
+    "image": "K/der_Onkel.png"
+  },
+  {
+    "word": "Traktor",
+    "article": "der",
+    "type": "noun",
+    "image": "K/der_Traktor.png"
+  },
+
+  {
+    "word": "Gurke",
+    "article": "die",
+    "type": "noun",
+    "image": "K/die_Gurke.png"
+  },
+  {
+    "word": "Karotte",
+    "article": "die",
+    "type": "noun",
+    "image": "K/die_Karotte.png"
+  },
+  {
+    "word": "Kartoffel",
+    "article": "die",
+    "type": "noun",
+    "image": "K/die_Kartoffel.png"
+  },
+  {
+    "word": "Kasse",
+    "article": "die",
+    "type": "noun",
+    "image": "K/die_Kasse.png"
+  },
+  {
+    "word": "Katze",
+    "article": "die",
+    "type": "noun",
+    "image": "K/die_Katze.png"
+  },
+  {
+    "word": "Kerze",
+    "article": "die",
+    "type": "noun",
+    "image": "K/die_Kerze.png"
+  },
+  {
+    "word": "Kette",
+    "article": "die",
+    "type": "noun",
+    "image": "K/die_Kette.png"
+  },
+  {
+    "word": "Kiste",
+    "article": "die",
+    "type": "noun",
+    "image": "K/die_Kiste.png"
+  },
+  {
+    "word": "Klasse",
+    "article": "die",
+    "type": "noun",
+    "image": "K/die_Klasse.png"
+  },
+  {
+    "word": "Krallen",
+    "article": "die",
+    "type": "noun",
+    "image": "K/die_Krallen.png"
+  },
+  {
+    "word": "Krawatte",
+    "article": "die",
+    "type": "noun",
+    "image": "K/die_Krawatte.png"
+  },
+  {
+    "word": "Kreide",
+    "article": "die",
+    "type": "noun",
+    "image": "K/die_Kreide.png"
+  },
+  {
+    "word": "Krone",
+    "article": "die",
+    "type": "noun",
+    "image": "K/die_Krone.png"
+  },
+  {
+    "word": "Kuh",
+    "article": "die",
+    "type": "noun",
+    "image": "K/die_Kuh.png"
+  },
+  {
+    "word": "Küche",
+    "article": "die",
+    "type": "noun",
+    "image": "K/die_Küche.png"
+  },
+  {
+    "word": "Musik",
+    "article": "die",
+    "type": "noun",
+    "image": "K/die_Musik.png"
+  },
+  {
+    "word": "Paprika",
+    "article": "die",
+    "type": "noun",
+    "image": "K/die_Paprika.png"
+  },
+  {
+    "word": "Rakete",
+    "article": "die",
+    "type": "noun",
+    "image": "K/die_Rakete.png"
+  },
+  {
+    "word": "Wolke",
+    "article": "die",
+    "type": "noun",
+    "image": "K/die_Wolke.png"
+  },
+
+  {
+    "word": "kalt",
+    "article": "",
+    "type": "adjective",
+    "image": "K/kalt.png"
+  },
+  {
+    "word": "kaputt",
+    "article": "",
+    "type": "adjective",
+    "image": "K/kaputt.png"
+  },
+  {
+    "word": "klein",
+    "article": "",
+    "type": "adjective",
+    "image": "K/klein.png"
+  },
+
+  {
+    "word": "kaufen",
+    "article": "",
+    "type": "verb",
+    "image": "K/kaufen.png"
+  },
+  {
+    "word": "klauen",
+    "article": "",
+    "type": "verb",
+    "image": "K/klauen.png"
+  },
+  {
+    "word": "kleben",
+    "article": "",
+    "type": "verb",
+    "image": "K/kleben.png"
+  },
+  {
+    "word": "klettern",
+    "article": "",
+    "type": "verb",
+    "image": "K/klettern.png"
+  },
+  {
+    "word": "kochen",
+    "article": "",
+    "type": "verb",
+    "image": "K/kochen.png"
+  },
+  {
+    "word": "kommen",
+    "article": "",
+    "type": "verb",
+    "image": "K/kommen.png"
+  },
+  {
+    "word": "kosten",
+    "article": "",
+    "type": "verb",
+    "image": "K/kosten.png"
+  },
+  {
+    "word": "kämmen",
+    "article": "",
+    "type": "verb",
+    "image": "K/kämmen.png"
+  },
+  {
+    "word": "küssen",
+    "article": "",
+    "type": "verb",
+    "image": "K/küssen.png"
+  },
+  {
+    "word": "trinken",
+    "article": "",
+    "type": "verb",
+    "image": "K/trinken.png"
+  }
+]

@@ -10,5 +10,13 @@
   {
     "id": "SCH",
     "label": "SCH"
+  },
+    {
+    "id": "K",
+    "label": "K"
+  },
+    {
+    "id": "Z",
+    "label": "Z"
   }
 ]
