@@ -1,0 +1,52 @@
+[
+  {
+    "id": "capital-001",
+    "prompt": "die spinne krabbelt im keller.",
+    "answer": "Die Spinne krabbelt im Keller."
+  },
+  {
+    "id": "capital-002",
+    "prompt": "opa und oma sind auf der bank.",
+    "answer": "Opa und Oma sind auf der Bank."
+  },
+  {
+    "id": "capital-003",
+    "prompt": "lisa und mia sind in der schule.",
+    "answer": "Lisa und Mia sind in der Schule."
+  },
+  {
+    "id": "capital-004",
+    "prompt": "im baum ist ein vogel.",
+    "answer": "Im Baum ist ein Vogel."
+  },
+  {
+    "id": "capital-005",
+    "prompt": "das fenster ist offen.",
+    "answer": "Das Fenster ist offen."
+  },
+  {
+    "id": "capital-006",
+    "prompt": "in der klasse ist eine tafel.",
+    "answer": "In der Klasse ist eine Tafel."
+  },
+  {
+    "id": "capital-007",
+    "prompt": "ali hat ein neues spielzeug.",
+    "answer": "Ali hat ein neues Spielzeug."
+  },
+  {
+    "id": "capital-008",
+    "prompt": "kari und bu fliegen mit dem Ufo.",
+    "answer": "Kari und Bu fliegen mit dem Ufo."
+  },
+  {
+    "id": "capital-009",
+    "prompt": "papa und mama fahren mit dem auto.",
+    "answer": "Papa und Mama fahren mit dem Auto."
+  },
+  {
+    "id": "capital-010",
+    "prompt": "die limonade ist gelb.",
+    "answer": "Die Limonade ist gelb."
+  }
+]
