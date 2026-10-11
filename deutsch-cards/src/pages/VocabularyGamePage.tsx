@@ -52,7 +52,7 @@ export function VocabularyGamePage({
     let randomIndex =
       Math.floor(
         Math.random() *
-          vocabulary.length
+        vocabulary.length
       )
 
     while (
@@ -63,7 +63,7 @@ export function VocabularyGamePage({
       randomIndex =
         Math.floor(
           Math.random() *
-            vocabulary.length
+          vocabulary.length
         )
     }
 
@@ -160,7 +160,7 @@ export function VocabularyGamePage({
     return (
       <>
         <GameHeader
-          title={`Wortschatz · ${category}`}
+          title={`Wortschatz · Vocabulary · ${category}`}
           onBack={onBack}
           onHelp={() =>
             setShowHelp(true)
@@ -186,11 +186,13 @@ export function VocabularyGamePage({
             alignItems: "center",
             justifyContent: "center",
             padding: "24px",
+            textAlign: "center",
           }}
         >
           <p>
-            Keine Wörter in dieser
-            Kategorie.
+            Keine Wörter in dieser Kategorie.
+            <br />
+            No words in this category.
           </p>
         </main>
       </>
@@ -204,7 +206,7 @@ export function VocabularyGamePage({
     return (
       <>
         <GameHeader
-          title={`Wortschatz · ${category}`}
+          title={`Wortschatz · Vocabulary · ${category}`}
           onBack={onBack}
           onHelp={() =>
             setShowHelp(true)
@@ -243,7 +245,7 @@ export function VocabularyGamePage({
               fontSize: "36px",
             }}
           >
-            🎉 Fertig!
+            🎉 Fertig! · Finished!
           </h2>
 
           <p
@@ -252,7 +254,7 @@ export function VocabularyGamePage({
               fontSize: "22px",
             }}
           >
-            Dein Ergebnis:
+            Dein Ergebnis · Your score
           </p>
 
           <strong
@@ -265,8 +267,9 @@ export function VocabularyGamePage({
           </strong>
 
           <p>
-            {vocabulary.length} Wörter
-            geübt.
+            {vocabulary.length} Wörter geübt.
+            <br />
+            {vocabulary.length} words practised.
           </p>
 
           <button
@@ -277,7 +280,7 @@ export function VocabularyGamePage({
               cursor: "pointer",
             }}
           >
-            Noch einmal spielen
+            Noch einmal · Play again
           </button>
         </main>
       </>
@@ -285,13 +288,17 @@ export function VocabularyGamePage({
   }
 
   if (!currentCard) {
-    return <p>Laden...</p>
+    return (
+      <p>
+        Laden... · Loading...
+      </p>
+    )
   }
 
   return (
     <>
       <GameHeader
-        title={`Wortschatz · ${category}`}
+        title={`Wortschatz · Vocabulary · ${category}`}
         onBack={onBack}
         onHelp={() =>
           setShowHelp(true)
@@ -339,13 +346,13 @@ export function VocabularyGamePage({
           }}
         >
           <span>
-            Wort{" "}
+            Wort / Word{" "}
             {answeredCount + 1} /{" "}
             {vocabulary.length}
           </span>
 
           <strong>
-            Punkte: {score}
+            Punkte / Score: {score}
           </strong>
         </div>
 
@@ -398,7 +405,7 @@ export function VocabularyGamePage({
                 cursor: "pointer",
               }}
             >
-              👁️ Antwort zeigen
+              👁️ Antwort zeigen · Show answer
             </button>
           ) : (
             <div
@@ -437,7 +444,7 @@ export function VocabularyGamePage({
               cursor: "pointer",
             }}
           >
-            🔊 Wort anhören
+            🔊 Wort anhören · Listen
           </button>
         </section>
 
@@ -460,16 +467,30 @@ export function VocabularyGamePage({
               handleAnswer(10)
             }
             style={{
-              minWidth: "150px",
+              minWidth: "170px",
               fontSize: "17px",
               padding: "12px 16px",
               cursor: "pointer",
             }}
           >
-            <div>✅ Richtig</div>
+            <div>
+              ✅ Richtig
+            </div>
 
             <small
               style={{
+                display: "block",
+                marginTop: "3px",
+                opacity: 0.75,
+              }}
+            >
+              Correct
+            </small>
+
+            <small
+              style={{
+                display: "block",
+                marginTop: "3px",
                 opacity: 0.65,
               }}
             >
@@ -482,7 +503,7 @@ export function VocabularyGamePage({
               handleAnswer(5)
             }
             style={{
-              minWidth: "150px",
+              minWidth: "170px",
               fontSize: "17px",
               padding: "12px 16px",
               cursor: "pointer",
@@ -494,6 +515,18 @@ export function VocabularyGamePage({
 
             <small
               style={{
+                display: "block",
+                marginTop: "3px",
+                opacity: 0.75,
+              }}
+            >
+              Wrong article
+            </small>
+
+            <small
+              style={{
+                display: "block",
+                marginTop: "3px",
                 opacity: 0.65,
               }}
             >
@@ -506,16 +539,30 @@ export function VocabularyGamePage({
               handleAnswer(0)
             }
             style={{
-              minWidth: "150px",
+              minWidth: "170px",
               fontSize: "17px",
               padding: "12px 16px",
               cursor: "pointer",
             }}
           >
-            <div>❌ Falsch</div>
+            <div>
+              ❌ Falsch
+            </div>
 
             <small
               style={{
+                display: "block",
+                marginTop: "3px",
+                opacity: 0.75,
+              }}
+            >
+              Wrong answer
+            </small>
+
+            <small
+              style={{
+                display: "block",
+                marginTop: "3px",
                 opacity: 0.65,
               }}
             >
@@ -527,209 +574,3 @@ export function VocabularyGamePage({
     </>
   )
 }
-
-/*
-import { useEffect, useState } from "react"
-import type {
-  VocabularyCategory,
-  VocabularyItem,
-} from "../data/vocabularyLoader"
-
-type VocabularyGamePageProps = {
-  category: VocabularyCategory["id"]
-  vocabulary: VocabularyItem[]
-  onBack: () => void
-}
-
-export function VocabularyGamePage({
-    category,
-    vocabulary,
-    onBack,
-  }: VocabularyGamePageProps) {
-  const [currentCard, setCurrentCard] = useState<VocabularyItem | null>(null)
-  const [showAnswer, setShowAnswer] = useState(false)
-  const [score, setScore] = useState(0)
-  const [answeredCount, setAnsweredCount] = useState(0)
-  const [usedIndexes, setUsedIndexes] = useState<number[]>([])
-  const [isFinished, setIsFinished] = useState(false)
-
-  function nextCard() {
-    if (usedIndexes.length >= vocabulary.length) {
-      setIsFinished(true)
-      return
-    }
-
-    let randomIndex = Math.floor(Math.random() * vocabulary.length)
-
-    while (usedIndexes.includes(randomIndex)) {
-      randomIndex = Math.floor(Math.random() * vocabulary.length)
-    }
-
-    setUsedIndexes((previousIndexes) => [...previousIndexes, randomIndex])
-    setCurrentCard(vocabulary[randomIndex])
-    setShowAnswer(false)
-  }
-
-  function handleAnswer(points: number) {
-    setScore((previousScore) => previousScore + points)
-    setAnsweredCount((previousCount) => previousCount + 1)
-
-    if (answeredCount + 1 >= vocabulary.length) {
-      setIsFinished(true)
-      return
-    }
-
-    nextCard()
-  }
-
-  function restartGame() {
-    setScore(0)
-    setAnsweredCount(0)
-    setUsedIndexes([])
-    setIsFinished(false)
-    setShowAnswer(false)
-    setCurrentCard(null)
-  }
-
-  function speakWord() {
-    if (!currentCard) {
-      return
-    }
-
-    const textToSpeak = currentCard.article
-      ? `${currentCard.article} ${currentCard.word}`
-      : currentCard.word
-
-    const utterance = new SpeechSynthesisUtterance(textToSpeak)
-
-    utterance.lang = "de-DE"
-    utterance.rate = 0.8
-
-    window.speechSynthesis.cancel()
-    window.speechSynthesis.speak(utterance)
-  }
-
-  useEffect(() => {
-    restartGame()
-  }, [category])
-
-  useEffect(() => {
-    if (!currentCard && !isFinished && vocabulary.length > 0) {
-      nextCard()
-    }
-  }, [currentCard, isFinished, vocabulary.length])
-
-  if (vocabulary.length === 0) {
-    return (
-      <main>
-        <p>No hay palabras para esta categoría.</p>
-        <button onClick={onBack}>Volver</button>
-      </main>
-    )
-  }
-
-  if (isFinished) {
-    const maxScore = vocabulary.length * 10
-
-    return (
-      <main
-        style={{
-          minHeight: "100vh",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: "20px",
-          padding: "24px",
-          textAlign: "center",
-        }}
-      >
-        <h1>Resultado final</h1>
-
-        <h2>
-          {score} / {maxScore} puntos
-        </h2>
-
-        <p>
-          Practicaste {vocabulary.length} palabras de la categoría {category}.
-        </p>
-
-        <button onClick={restartGame}>Jugar otra vez</button>
-
-        <button onClick={onBack}>Volver al inicio</button>
-      </main>
-    )
-  }
-
-  if (!currentCard) {
-    return <p>Cargando...</p>
-  }
-
-  return (
-    <main
-      style={{
-        minHeight: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        gap: "20px",
-        padding: "24px",
-      }}
-    >
-      <button onClick={onBack}>← Volver</button>
-
-      <h1>Categoría {category}</h1>
-
-      <p>
-        Palabra {answeredCount + 1} de {vocabulary.length}
-      </p>
-
-      <p>Puntos: {score}</p>
-
-      <img
-        src={`/images/${currentCard.image}`}
-        alt={currentCard.word}
-        style={{
-          width: "320px",
-          maxWidth: "90vw",
-          borderRadius: "16px",
-        }}
-      />
-
-      {!showAnswer ? (
-        <button onClick={() => setShowAnswer(true)}>Ver respuesta</button>
-      ) : (
-        <div style={{ textAlign: "center" }}>
-          <h2>
-            {currentCard.article} {currentCard.word}
-          </h2>
-          <p>{currentCard.type}</p>
-        </div>
-      )}
-
-      <button onClick={speakWord}>🔊 Escuchar palabra</button>
-
-      <div
-        style={{
-          display: "flex",
-          gap: "12px",
-          flexWrap: "wrap",
-          justifyContent: "center",
-        }}
-      >
-        <button onClick={() => handleAnswer(10)}>
-          Respuesta correcta
-        </button>
-
-        <button onClick={() => handleAnswer(5)}>
-          Artículo erróneo
-        </button>
-
-        <button onClick={() => handleAnswer(0)}>
-          Respuesta errónea
-        </button>
-      </div>
-    </main>
-  )
-}
-*/

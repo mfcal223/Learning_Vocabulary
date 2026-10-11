@@ -1,0 +1,218 @@
+[
+  {
+    "word": "Zug",
+    "article": "der",
+    "type": "noun",
+    "image": "Z/der_Zug.png"
+  },
+  {
+    "word": "Zeiger",
+    "article": "der",
+    "type": "noun",
+    "image": "Z/der_Zeiger.png"
+  },
+  {
+    "word": "Zwerg",
+    "article": "der",
+    "type": "noun",
+    "image": "Z/der_Zwerg.png"
+  },
+  {
+    "word": "Zauberer",
+    "article": "der",
+    "type": "noun",
+    "image": "Z/der_Zauberer.png"
+  },
+  {
+    "word": "Pilz",
+    "article": "der",
+    "type": "noun",
+    "image": "Z/der_Pilz.png"
+  },
+  {
+    "word": "Zaun",
+    "article": "der",
+    "type": "noun",
+    "image": "Z/der_Zaun.png"
+  },
+  {
+    "word": "Zettel",
+    "article": "der",
+    "type": "noun",
+    "image": "Z/der_Zettel.png"
+  },
+  {
+    "word": "Zahn",
+    "article": "der",
+    "type": "noun",
+    "image": "Z/der_Zahn.png"
+  },
+  {
+    "word": "Zoo",
+    "article": "der",
+    "type": "noun",
+    "image": "Z/der_Zoo.png"
+  },
+  {
+    "word": "Zirkus",
+    "article": "der",
+    "type": "noun",
+    "image": "Z/der_Zirkus.png"
+  },
+  {
+    "word": "Zeh",
+    "article": "der",
+    "type": "noun",
+    "image": "Z/der_Zeh.png"
+  },
+  {
+    "word": "Arzt",
+    "article": "der",
+    "type": "noun",
+    "image": "Z/der_Arzt.png"
+  },
+  {
+    "word": "Schwanz",
+    "article": "der",
+    "type": "noun",
+    "image": "Z/der_Schwanz.png"
+  },
+  {
+    "word": "Zitrone",
+    "article": "die",
+    "type": "noun",
+    "image": "Z/die_Zitrone.png"
+  },
+  {
+    "word": "Ziege",
+    "article": "die",
+    "type": "noun",
+    "image": "Z/die_Ziege.png"
+  },
+  {
+    "word": "Zwiebel",
+    "article": "die",
+    "type": "noun",
+    "image": "Z/die_Zwiebel.png"
+  },
+  {
+    "word": "Zahnbürste",
+    "article": "die",
+    "type": "noun",
+    "image": "Z/die_Zahnbürste.png"
+  },
+  {
+    "word": "Zeitung",
+    "article": "die",
+    "type": "noun",
+    "image": "Z/die_Zeitung.png"
+  },
+  {
+    "word": "Pizza",
+    "article": "die",
+    "type": "noun",
+    "image": "Z/die_Pizza.png"
+  },
+  {
+    "word": "Polizei",
+    "article": "die",
+    "type": "noun",
+    "image": "Z/die_Polizei.png"
+  },
+  {
+    "word": "Zimmer",
+    "article": "das",
+    "type": "noun",
+    "image": "Z/das_Zimmer.png"
+  },
+  {
+    "word": "Zelt",
+    "article": "das",
+    "type": "noun",
+    "image": "Z/das_Zelt.png"
+  },
+  {
+    "word": "Salz",
+    "article": "das",
+    "type": "noun",
+    "image": "Z/das_Salz.png"
+  },
+  {
+    "word": "Zebra",
+    "article": "das",
+    "type": "noun",
+    "image": "Z/das_Zebra.png"
+  },
+  {
+    "word": "Polizeiauto",
+    "article": "das",
+    "type": "noun",
+    "image": "Z/das_Polizeiauto.png"
+  },
+  {
+    "word": "tanzen",
+    "article": "",
+    "type": "verb",
+    "image": "Z/tanzen.png"
+  },
+  {
+    "word": "zittern",
+    "article": "",
+    "type": "verb",
+    "image": "Z/zittern.png"
+  },
+  {
+    "word": "zahlen",
+    "article": "",
+    "type": "verb",
+    "image": "Z/zahlen.png"
+  },
+  {
+    "word": "zählen",
+    "article": "",
+    "type": "verb",
+    "image": "Z/zählen.png"
+  },
+  {
+    "word": "anziehen",
+    "article": "",
+    "type": "verb",
+    "image": "Z/anziehen.png"
+  },
+  {
+    "word": "zaubern",
+    "article": "",
+    "type": "verb",
+    "image": "Z/zaubern.png"
+  },
+  {
+    "word": "spazieren",
+    "article": "",
+    "type": "verb",
+    "image": "Z/spazieren.png"
+  },
+  {
+    "word": "zwei",
+    "article": "",
+    "type": "number",
+    "image": "Z/zwei.png"
+  },
+  {
+    "word": "zehn",
+    "article": "",
+    "type": "number",
+    "image": "Z/zehn.png"
+  },
+  {
+    "word": "zwanzig",
+    "article": "",
+    "type": "number",
+    "image": "Z/zwanzig.png"
+  },
+  {
+    "word": "kurz",
+    "article": "",
+    "type": "adjective",
+    "image": "Z/kurz.png"
+  }
+]
