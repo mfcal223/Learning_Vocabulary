@@ -1,0 +1,152 @@
+[
+  {
+    "word": "Pirat",
+    "article": "der",
+    "type": "noun",
+    "image": "P/der_Pirat.png"
+  },
+  {
+    "word": "Planet",
+    "article": "der",
+    "type": "noun",
+    "image": "P/der_Planet.png"
+  },
+  {
+    "word": "Pilz",
+    "article": "der",
+    "type": "noun",
+    "image": "P/der_Pilz.png"
+  },
+  {
+    "word": "Polizist",
+    "article": "der",
+    "type": "noun",
+    "image": "P/der_Polizist.png"
+  },
+  {
+    "word": "Panda",
+    "article": "der",
+    "type": "noun",
+    "image": "P/der_Panda.png"
+  },
+  {
+    "word": "Stempel",
+    "article": "der",
+    "type": "noun",
+    "image": "P/der_Stempel.png"
+  },
+  {
+    "word": "Puppe",
+    "article": "die",
+    "type": "noun",
+    "image": "P/die_Puppe.png"
+  },
+  {
+    "word": "Palme",
+    "article": "die",
+    "type": "noun",
+    "image": "P/die_Palme.png"
+  },
+  {
+    "word": "Pinguin",
+    "article": "der",
+    "type": "noun",
+    "image": "P/der_Pinguin.png"
+  },
+  {
+    "word": "Teppich",
+    "article": "der",
+    "type": "noun",
+    "image": "P/der_Teppich.png"
+  },
+  {
+    "word": "Pullover",
+    "article": "der",
+    "type": "noun",
+    "image": "P/der_Pullover.png"
+  },
+  {
+    "word": "Treppe",
+    "article": "die",
+    "type": "noun",
+    "image": "P/die_Treppe.png"
+  },
+  {
+    "word": "Ampel",
+    "article": "die",
+    "type": "noun",
+    "image": "P/die_Ampel.png"
+  },
+  {
+    "word": "Suppe",
+    "article": "die",
+    "type": "noun",
+    "image": "P/die_Suppe.png"
+  },
+  {
+    "word": "Taschenlampe",
+    "article": "die",
+    "type": "noun",
+    "image": "P/die_Taschenlampe.png"
+  },
+  {
+    "word": "Pantoffeln",
+    "article": "die",
+    "type": "noun",
+    "image": "P/die_Pantoffeln.png"
+  },
+  {
+    "word": "Raupe",
+    "article": "die",
+    "type": "noun",
+    "image": "P/die_Raupe.png"
+  },
+  {
+    "word": "Polizei",
+    "article": "die",
+    "type": "noun",
+    "image": "P/die_Polizei.png"
+  },
+  {
+    "word": "Wippe",
+    "article": "die",
+    "type": "noun",
+    "image": "P/die_Wippe.png"
+  },
+  {
+    "word": "Papier",
+    "article": "das",
+    "type": "noun",
+    "image": "P/das_Papier.png"
+  },
+  {
+    "word": "Plakat",
+    "article": "das",
+    "type": "noun",
+    "image": "P/das_Plakat.png"
+  },
+  {
+    "word": "Pony",
+    "article": "das",
+    "type": "noun",
+    "image": "P/das_Pony.png"
+  },
+  {
+    "word": "aufpassen",
+    "article": "",
+    "type": "verb",
+    "image": "P/aufpassen.png"
+  },
+  {
+    "word": "parken",
+    "article": "",
+    "type": "verb",
+    "image": "P/parken.png"
+  },
+  {
+    "word": "stempeln",
+    "article": "",
+    "type": "verb",
+    "image": "P/stempeln.png"
+  }
+]
