@@ -1,6 +1,6 @@
 import { useState } from "react"
-import capitalizationData from "../data/revision/capitalization.json"
-import type { CapitalizationExercise } from "../types/revision"
+import { getCapitalizationExercises } from "../data/sentences/sentenceLoader"
+import type { CapitalizationExercise, SentenceCategoryId } from "../types/sentence"
 
 import { GameHeader } from "../components/GameHeader"
 import { GameHelp } from "../components/GameHelp"
@@ -8,6 +8,7 @@ import { gameHelp } from "../data/help/gameHelp"
 
 type CapitalizationGamePageProps = {
   onBack: () => void
+  category?: SentenceCategoryId | null
 }
 
 type Feedback = "correct" | "incorrect" | null
@@ -89,9 +90,10 @@ function groupCharactersIntoWords(
 
 export function CapitalizationGamePage({
   onBack,
+  category,
 }: CapitalizationGamePageProps) {
   const allExercises =
-    capitalizationData as CapitalizationExercise[]
+    getCapitalizationExercises(category)
 
   const [exercises, setExercises] = useState<
     CapitalizationExercise[]
@@ -104,7 +106,7 @@ export function CapitalizationGamePage({
 
   const [characters, setCharacters] =
     useState<string[]>(
-      () => exercises[0].prompt.split("")
+      () => exercises[0]?.prompt.split("") ?? []
     )
 
   const [feedback, setFeedback] =
@@ -279,13 +281,35 @@ export function CapitalizationGamePage({
     setCurrentExerciseIndex(0)
 
     setCharacters(
-      newExercises[0].prompt.split("")
+      newExercises[0]?.prompt.split("") ?? []
     )
 
     setConfirmedIndexes([])
     setFeedback(null)
     setScore(0)
     setGameFinished(false)
+  }
+
+  if (exercises.length === 0) {
+    return (
+      <>
+        <GameHeader
+          title="Groß oder klein? · Uppercase or lowercase?"
+          onBack={onBack}
+          onHelp={() => setShowHelp(true)}
+        />
+        {showHelp && (
+          <GameHelp
+            content={gameHelp.capitalization}
+            onClose={() => setShowHelp(false)}
+          />
+        )}
+        <main style={{ padding: "32px", textAlign: "center" }}>
+          <h2>Keine Übungen verfügbar · No exercises available</h2>
+          <p>Für diese Kategorie gibt es noch keine Übungen.</p>
+        </main>
+      </>
+    )
   }
 
   if (gameFinished) {

@@ -1,6 +1,6 @@
 import { useState } from "react"
-import correctWritingData from "../data/revision/correctWriting.json"
-import type { CorrectWritingExercise } from "../types/revision"
+import { getCorrectWritingExercises } from "../data/sentences/sentenceLoader"
+import type { CorrectWritingExercise, SentenceCategoryId } from "../types/sentence"
 
 import { GameHeader } from "../components/GameHeader"
 import { GameHelp } from "../components/GameHelp"
@@ -8,6 +8,7 @@ import { gameHelp } from "../data/help/gameHelp"
 
 type CorrectWritingGamePageProps = {
   onBack: () => void
+  category?: SentenceCategoryId | null
 }
 
 type Feedback = "correct" | "incorrect" | null
@@ -29,9 +30,10 @@ function shuffle<T>(items: T[]): T[] {
 
 export function CorrectWritingGamePage({
   onBack,
+  category,
 }: CorrectWritingGamePageProps) {
   const allExercises =
-    correctWritingData as CorrectWritingExercise[]
+    getCorrectWritingExercises(category)
 
   const [exercises, setExercises] = useState<
     CorrectWritingExercise[]
@@ -123,6 +125,28 @@ export function CorrectWritingGamePage({
     ) {
       handleCheck()
     }
+  }
+
+  if (exercises.length === 0) {
+    return (
+      <>
+        <GameHeader
+          title="Schreibe richtig · Write correctly"
+          onBack={onBack}
+          onHelp={() => setShowHelp(true)}
+        />
+        {showHelp && (
+          <GameHelp
+            content={gameHelp.correctWriting}
+            onClose={() => setShowHelp(false)}
+          />
+        )}
+        <main style={{ padding: "32px", textAlign: "center" }}>
+          <h2>Keine Übungen verfügbar · No exercises available</h2>
+          <p>Für diese Kategorie gibt es noch keine Übungen.</p>
+        </main>
+      </>
+    )
   }
 
   if (gameFinished) {

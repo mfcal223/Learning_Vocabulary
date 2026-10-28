@@ -1,6 +1,6 @@
 import { useState } from "react"
-import scrambledSentencesData from "../data/revision/scrambledSentences.json"
-import type { ScrambledSentence } from "../types/revision"
+import { getScrambledSentenceExercises } from "../data/sentences/sentenceLoader"
+import type { ScrambledSentence, SentenceCategoryId } from "../types/sentence"
 
 import { GameHeader } from "../components/GameHeader"
 import { GameHelp } from "../components/GameHelp"
@@ -8,6 +8,7 @@ import { gameHelp } from "../data/help/gameHelp"
 
 type ScrambledSentenceGamePageProps = {
   onBack: () => void
+  category?: SentenceCategoryId | null
 }
 
 type Token = {
@@ -72,9 +73,10 @@ function createTokens(
 
 export function ScrambledSentenceGamePage({
   onBack,
+  category,
 }: ScrambledSentenceGamePageProps) {
   const allExercises =
-    scrambledSentencesData as ScrambledSentence[]
+    getScrambledSentenceExercises(category)
 
   const [exercises, setExercises] =
     useState<ScrambledSentence[]>(() =>
@@ -90,7 +92,7 @@ export function ScrambledSentenceGamePage({
     availableTokens,
     setAvailableTokens,
   ] = useState<Token[]>(() =>
-    createTokens(exercises[0])
+    exercises[0] ? createTokens(exercises[0]) : []
   )
 
   const [
@@ -227,12 +229,34 @@ export function ScrambledSentenceGamePage({
     setSelectedTokens([])
 
     setAvailableTokens(
-      createTokens(newExercises[0])
+      newExercises[0] ? createTokens(newExercises[0]) : []
     )
 
     setFeedback(null)
     setScore(0)
     setGameFinished(false)
+  }
+
+  if (exercises.length === 0) {
+    return (
+      <>
+        <GameHeader
+          title="Schüttelsätze · Scrambled sentences"
+          onBack={onBack}
+          onHelp={() => setShowHelp(true)}
+        />
+        {showHelp && (
+          <GameHelp
+            content={gameHelp.scrambledSentences}
+            onClose={() => setShowHelp(false)}
+          />
+        )}
+        <main style={{ padding: "32px", textAlign: "center" }}>
+          <h2>Keine Übungen verfügbar · No exercises available</h2>
+          <p>Für diese Kategorie gibt es noch keine Übungen.</p>
+        </main>
+      </>
+    )
   }
 
   if (gameFinished) {

@@ -1,0 +1,231 @@
+[
+  {
+    "id": "sentence-001",
+    "text": "Ich schneide die Haare mit der Schere.",
+    "categories": [
+      "H",
+      "SCH"
+    ],
+    "focusWords": [
+      "Haare",
+      "Schere",
+      "schneiden"
+    ],
+    "exercises": {
+      "scrambledSentences": {
+        "sourceId": "schuettel-001",
+        "answerTokens": [
+          "Ich",
+          "schneide",
+          "die",
+          "Haare",
+          "mit",
+          "der",
+          "Schere",
+          "."
+        ]
+      }
+    }
+  },
+  {
+    "id": "sentence-002",
+    "text": "Das Schwein frisst den Salat.",
+    "categories": [
+      "SCH"
+    ],
+    "focusWords": [
+      "Schwein"
+    ],
+    "exercises": {
+      "scrambledSentences": {
+        "sourceId": "schuettel-002",
+        "answerTokens": [
+          "Das",
+          "Schwein",
+          "frisst",
+          "den",
+          "Salat",
+          "."
+        ]
+      }
+    }
+  },
+  {
+    "id": "sentence-003",
+    "text": "Der Schwan schwimmt auf dem See.",
+    "categories": [
+      "SCH"
+    ],
+    "focusWords": [
+      "schwimmen"
+    ],
+    "exercises": {
+      "scrambledSentences": {
+        "sourceId": "schuettel-003",
+        "answerTokens": [
+          "Der",
+          "Schwan",
+          "schwimmt",
+          "auf",
+          "dem",
+          "See",
+          "."
+        ]
+      }
+    }
+  },
+  {
+    "id": "sentence-004",
+    "text": "Die Spinne krabbelt im Keller.",
+    "categories": [
+      "K"
+    ],
+    "focusWords": [
+      "Keller"
+    ],
+    "exercises": {
+      "capitalization": {
+        "sourceId": "capital-001",
+        "prompt": "die spinne krabbelt im keller."
+      }
+    }
+  },
+  {
+    "id": "sentence-005",
+    "text": "Opa und Oma sind auf der Bank.",
+    "categories": [],
+    "focusWords": [],
+    "exercises": {
+      "capitalization": {
+        "sourceId": "capital-002",
+        "prompt": "opa und oma sind auf der bank."
+      }
+    }
+  },
+  {
+    "id": "sentence-006",
+    "text": "Lisa und Mia sind in der Schule.",
+    "categories": [
+      "SCH"
+    ],
+    "focusWords": [
+      "Schule"
+    ],
+    "exercises": {
+      "capitalization": {
+        "sourceId": "capital-003",
+        "prompt": "lisa und mia sind in der schule."
+      }
+    }
+  },
+  {
+    "id": "sentence-007",
+    "text": "Im Baum ist ein Vogel.",
+    "categories": [],
+    "focusWords": [],
+    "exercises": {
+      "capitalization": {
+        "sourceId": "capital-004",
+        "prompt": "im baum ist ein vogel."
+      }
+    }
+  },
+  {
+    "id": "sentence-008",
+    "text": "Das Fenster ist offen.",
+    "categories": [],
+    "focusWords": [],
+    "exercises": {
+      "capitalization": {
+        "sourceId": "capital-005",
+        "prompt": "das fenster ist offen."
+      }
+    }
+  },
+  {
+    "id": "sentence-009",
+    "text": "In der Klasse ist eine Tafel.",
+    "categories": [
+      "K"
+    ],
+    "focusWords": [
+      "Klasse"
+    ],
+    "exercises": {
+      "capitalization": {
+        "sourceId": "capital-006",
+        "prompt": "in der klasse ist eine tafel."
+      }
+    }
+  },
+  {
+    "id": "sentence-010",
+    "text": "Ali hat ein neues Spielzeug.",
+    "categories": [],
+    "focusWords": [],
+    "exercises": {
+      "capitalization": {
+        "sourceId": "capital-007",
+        "prompt": "ali hat ein neues spielzeug."
+      }
+    }
+  },
+  {
+    "id": "sentence-011",
+    "text": "Kari und Bu fliegen mit dem Ufo.",
+    "categories": [],
+    "focusWords": [],
+    "exercises": {
+      "capitalization": {
+        "sourceId": "capital-008",
+        "prompt": "kari und bu fliegen mit dem Ufo."
+      }
+    }
+  },
+  {
+    "id": "sentence-012",
+    "text": "Papa und Mama fahren mit dem Auto.",
+    "categories": [
+      "H"
+    ],
+    "focusWords": [
+      "fahren"
+    ],
+    "exercises": {
+      "capitalization": {
+        "sourceId": "capital-009",
+        "prompt": "papa und mama fahren mit dem auto."
+      }
+    }
+  },
+  {
+    "id": "sentence-013",
+    "text": "Die Limonade ist gelb.",
+    "categories": [],
+    "focusWords": [],
+    "exercises": {
+      "capitalization": {
+        "sourceId": "capital-010",
+        "prompt": "die limonade ist gelb."
+      }
+    }
+  },
+  {
+    "id": "sentence-014",
+    "text": "Ich esse die Schokolade im Haus.",
+    "categories": [
+      "H",
+      "D"
+    ],
+    "focusWords": [
+      "Haus",
+      "Schokolade"
+    ],
+    "exercises": {
+      "correctWriting": {
+        "sourceId": "write-001",
+        "prompt": "IchessedieSchokoladeimHaus."
+      }
+    }
+  }
+]
