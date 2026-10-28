@@ -16,6 +16,8 @@ type Token = {
   text: string
 }
 
+const GAME_LENGTH = 10
+
 type Feedback = "correct" | "incorrect" | null
 
 function shuffle<T>(items: T[]): T[] {
@@ -80,7 +82,7 @@ export function ScrambledSentenceGamePage({
 
   const [exercises, setExercises] =
     useState<ScrambledSentence[]>(() =>
-      shuffle(allExercises)
+      shuffle(allExercises).slice(0, GAME_LENGTH)
     )
 
   const [
@@ -222,7 +224,7 @@ export function ScrambledSentenceGamePage({
 
   function handleRestart() {
     const newExercises =
-      shuffle(allExercises)
+      shuffle(allExercises).slice(0, GAME_LENGTH)
 
     setExercises(newExercises)
     setCurrentExerciseIndex(0)

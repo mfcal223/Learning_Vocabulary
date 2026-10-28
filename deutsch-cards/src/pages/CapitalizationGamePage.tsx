@@ -11,6 +11,8 @@ type CapitalizationGamePageProps = {
   category?: SentenceCategoryId | null
 }
 
+const GAME_LENGTH = 10
+
 type Feedback = "correct" | "incorrect" | null
 
 type CharacterCell = {
@@ -97,7 +99,7 @@ export function CapitalizationGamePage({
 
   const [exercises, setExercises] = useState<
     CapitalizationExercise[]
-  >(() => shuffle(allExercises))
+  >(() => shuffle(allExercises).slice(0, GAME_LENGTH))
 
   const [
     currentExerciseIndex,
@@ -275,7 +277,7 @@ export function CapitalizationGamePage({
 
   function handleRestart() {
     const newExercises =
-      shuffle(allExercises)
+      shuffle(allExercises).slice(0, GAME_LENGTH)
 
     setExercises(newExercises)
     setCurrentExerciseIndex(0)

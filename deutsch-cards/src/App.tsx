@@ -1,4 +1,5 @@
 import { useState } from "react"
+import type { TranslationLanguage } from "./i18n/uiText"
 import {
   vocabularyCategories,
   vocabularyByCategory,
@@ -6,6 +7,7 @@ import {
 } from "./data/vocabularyLoader"
 
 import { HomePage } from "./pages/HomePage"
+import { CategoryGamesPage } from "./pages/CategoryGamesPage"
 import { VocabularyGamePage } from "./pages/VocabularyGamePage"
 import { VerbGamePage } from "./pages/VerbGamePage"
 import { ScrambledSentenceGamePage } from "./pages/ScrambledSentenceGamePage"
@@ -19,44 +21,67 @@ type Activity =
   | "correctWriting"
   | "capitalization"
 
+type CategoryId = VocabularyCategory["id"]
+
 function App() {
+  const [language, setLanguage] = useState<TranslationLanguage>(() => {
+    try {
+      return window.localStorage.getItem("deutsch-cards-language") === "en"
+        ? "en"
+        : "es"
+    } catch {
+      return "es"
+    }
+  })
+
+  function changeLanguage(nextLanguage: TranslationLanguage) {
+    setLanguage(nextLanguage)
+    try {
+      window.localStorage.setItem("deutsch-cards-language", nextLanguage)
+    } catch {
+      // The toggle still works if browser storage is unavailable.
+    }
+  }
+
+  const [selectedCategory, setSelectedCategory] =
+    useState<CategoryId | null>(null)
   const [selectedActivity, setSelectedActivity] =
     useState<Activity | null>(null)
 
-  const [selectedCategory, setSelectedCategory] =
-    useState<VocabularyCategory["id"] | null>(null)
+  function startGeneralGame(activity: Activity) {
+    setSelectedCategory(null)
+    setSelectedActivity(activity)
+  }
 
-  if (
-    selectedActivity === "vocabulary" &&
-    selectedCategory
-  ) {
-    const selectedVocabulary =
-      vocabularyByCategory[selectedCategory]
+  // Un juego iniciado desde una categoría vuelve al menú de esa letra.
+  // Un juego general vuelve al HOME.
+  function backFromGame() {
+    setSelectedActivity(null)
+  }
 
+  if (selectedActivity === "vocabulary" && selectedCategory) {
     return (
       <VocabularyGamePage
+        key={`vocabulary-${selectedCategory}`}
         category={selectedCategory}
-        vocabulary={selectedVocabulary}
-        onBack={() => {
-          setSelectedCategory(null)
-          setSelectedActivity(null)
-        }}
+        vocabulary={vocabularyByCategory[selectedCategory]}
+        onBack={backFromGame}
       />
     )
   }
 
   if (selectedActivity === "verbs") {
-    return (
-      <VerbGamePage
-        onBack={() => setSelectedActivity(null)}
-      />
-    )
+    // Por ahora, VerbGamePage mantiene el modo general original.
+    // El filtrado por letra necesita revisar VerbGamePage.tsx y endings.json.
+    return <VerbGamePage onBack={backFromGame} />
   }
 
   if (selectedActivity === "scrambledSentences") {
     return (
       <ScrambledSentenceGamePage
-        onBack={() => setSelectedActivity(null)}
+        key={`scrambled-${selectedCategory ?? "all"}`}
+        category={selectedCategory}
+        onBack={backFromGame}
       />
     )
   }
@@ -64,7 +89,9 @@ function App() {
   if (selectedActivity === "correctWriting") {
     return (
       <CorrectWritingGamePage
-        onBack={() => setSelectedActivity(null)}
+        key={`writing-${selectedCategory ?? "all"}`}
+        category={selectedCategory}
+        onBack={backFromGame}
       />
     )
   }
@@ -72,197 +99,22 @@ function App() {
   if (selectedActivity === "capitalization") {
     return (
       <CapitalizationGamePage
-        onBack={() => setSelectedActivity(null)}
-      />
-    )
-  }
-
-  return (
-    <HomePage
-      categories={vocabularyCategories}
-      onSelectCategory={(categoryId) => {
-        setSelectedActivity("vocabulary")
-        setSelectedCategory(categoryId)
-      }}
-      onSelectVerbs={() =>
-        setSelectedActivity("verbs")
-      }
-      onSelectScrambledSentences={() =>
-        setSelectedActivity("scrambledSentences")
-      }
-      onSelectCorrectWriting={() =>
-        setSelectedActivity("correctWriting")
-      }
-      onSelectCapitalization={() =>
-        setSelectedActivity("capitalization")
-      }
-    />
-  )
-}
-
-export default App
-
-
-/* version q incluye juego de ordenar oraciones*/
-/*
-import { useState } from "react"
-import {
-  vocabularyCategories,
-  vocabularyByCategory,
-  type VocabularyCategory,
-} from "./data/vocabularyLoader"
-
-import { HomePage } from "./pages/HomePage"
-import { GamePage } from "./pages/GamePage"
-import { VerbGamePage } from "./pages/VerbGamePage"
-import { ScrambledSentenceGamePage } from "./pages/ScrambledSentenceGamePage"
-
-type Activity =
-  | "vocabulary"
-  | "verbs"
-  | "scrambledSentences"
-
-function App() {
-  const [selectedActivity, setSelectedActivity] =
-    useState<Activity | null>(null)
-
-  const [selectedCategory, setSelectedCategory] =
-    useState<VocabularyCategory["id"] | null>(null)
-
-  if (
-    selectedActivity === "vocabulary" &&
-    selectedCategory
-  ) {
-    const selectedVocabulary =
-      vocabularyByCategory[selectedCategory]
-
-    return (
-      <GamePage
+        key={`capitalization-${selectedCategory ?? "all"}`}
         category={selectedCategory}
-        vocabulary={selectedVocabulary}
-        onBack={() => {
-          setSelectedCategory(null)
-          setSelectedActivity(null)
-        }}
+        onBack={backFromGame}
       />
     )
   }
 
-  if (selectedActivity === "verbs") {
-    return (
-      <VerbGamePage
-        onBack={() => setSelectedActivity(null)}
-      />
-    )
-  }
-
-  if (selectedActivity === "scrambledSentences") {
-    return (
-      <ScrambledSentenceGamePage
-        onBack={() => setSelectedActivity(null)}
-      />
-    )
-  }
-
-  return (
-    <HomePage
-      categories={vocabularyCategories}
-      onSelectCategory={(categoryId) => {
-        setSelectedActivity("vocabulary")
-        setSelectedCategory(categoryId)
-      }}
-      onSelectVerbs={() =>
-        setSelectedActivity("verbs")
-      }
-      onSelectScrambledSentences={() =>
-        setSelectedActivity("scrambledSentences")
-      }
-    />
-  )
-}
-
-export default App
-*/
-/*
-import { useState } from "react"
-import {
-  vocabularyCategories,
-  vocabularyByCategory,
-  type VocabularyCategory,
-} from "./data/vocabularyLoader"
-import { HomePage } from "./pages/HomePage"
-import { GamePage } from "./pages/GamePage"
-import { VerbGamePage } from "./pages/VerbGamePage"
-
-type Activity = "vocabulary" | "verbs"
-
-function App() {
-  const [selectedActivity, setSelectedActivity] =
-    useState<Activity | null>(null)
-
-  const [selectedCategory, setSelectedCategory] =
-    useState<VocabularyCategory["id"] | null>(null)
-
-  if (selectedActivity === "vocabulary" && selectedCategory) {
-    const selectedVocabulary = vocabularyByCategory[selectedCategory]
-
-    return (
-      <GamePage
-        category={selectedCategory}
-        vocabulary={selectedVocabulary}
-        onBack={() => {
-          setSelectedCategory(null)
-          setSelectedActivity(null)
-        }}
-      />
-    )
-  }
-
-  if (selectedActivity === "verbs") {
-    return (
-      <VerbGamePage
-        onBack={() => setSelectedActivity(null)}
-      />
-    )
-  }
-
-  return (
-    <HomePage
-      categories={vocabularyCategories}
-      onSelectCategory={(categoryId) => {
-        setSelectedActivity("vocabulary")
-        setSelectedCategory(categoryId)
-      }}
-      onSelectVerbs={() => setSelectedActivity("verbs")}
-    />
-  )
-}
-
-export default App
-*/
-
-/* version antes de juego de verbos*/
-/*
-import { useState } from "react"
-import {
-  vocabularyCategories,
-  vocabularyByCategory,
-  type VocabularyCategory,
-} from "./data/vocabularyLoader"
-import { HomePage } from "./pages/HomePage"
-import { GamePage } from "./pages/GamePage"
-
-function App() {
-  const [selectedCategory, setSelectedCategory] =
-    useState<VocabularyCategory["id"] | null>(null)
-
+  // Elegir una letra ya no abre directamente Vocabulary Game.
   if (selectedCategory) {
-    const selectedVocabulary = vocabularyByCategory[selectedCategory]
-
     return (
-      <GamePage
+      <CategoryGamesPage
         category={selectedCategory}
-        vocabulary={selectedVocabulary}
+        vocabularyCount={vocabularyByCategory[selectedCategory].length}
+        language={language}
+        onChangeLanguage={changeLanguage}
+        onSelectGame={(activity) => setSelectedActivity(activity)}
         onBack={() => setSelectedCategory(null)}
       />
     )
@@ -271,10 +123,18 @@ function App() {
   return (
     <HomePage
       categories={vocabularyCategories}
-      onSelectCategory={setSelectedCategory}
+      language={language}
+      onChangeLanguage={changeLanguage}
+      onSelectCategory={(categoryId) => {
+        setSelectedCategory(categoryId)
+        setSelectedActivity(null)
+      }}
+      onSelectVerbs={() => startGeneralGame("verbs")}
+      onSelectScrambledSentences={() => startGeneralGame("scrambledSentences")}
+      onSelectCorrectWriting={() => startGeneralGame("correctWriting")}
+      onSelectCapitalization={() => startGeneralGame("capitalization")}
     />
   )
 }
 
 export default App
-*/

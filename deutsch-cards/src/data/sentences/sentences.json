@@ -1,231 +1,65 @@
 [
-  {
-    "id": "sentence-001",
-    "text": "Ich schneide die Haare mit der Schere.",
-    "categories": [
-      "H",
-      "SCH"
-    ],
-    "focusWords": [
-      "Haare",
-      "Schere",
-      "schneiden"
-    ],
-    "exercises": {
-      "scrambledSentences": {
-        "sourceId": "schuettel-001",
-        "answerTokens": [
-          "Ich",
-          "schneide",
-          "die",
-          "Haare",
-          "mit",
-          "der",
-          "Schere",
-          "."
-        ]
-      }
-    }
-  },
-  {
-    "id": "sentence-002",
-    "text": "Das Schwein frisst den Salat.",
-    "categories": [
-      "SCH"
-    ],
-    "focusWords": [
-      "Schwein"
-    ],
-    "exercises": {
-      "scrambledSentences": {
-        "sourceId": "schuettel-002",
-        "answerTokens": [
-          "Das",
-          "Schwein",
-          "frisst",
-          "den",
-          "Salat",
-          "."
-        ]
-      }
-    }
-  },
-  {
-    "id": "sentence-003",
-    "text": "Der Schwan schwimmt auf dem See.",
-    "categories": [
-      "SCH"
-    ],
-    "focusWords": [
-      "schwimmen"
-    ],
-    "exercises": {
-      "scrambledSentences": {
-        "sourceId": "schuettel-003",
-        "answerTokens": [
-          "Der",
-          "Schwan",
-          "schwimmt",
-          "auf",
-          "dem",
-          "See",
-          "."
-        ]
-      }
-    }
-  },
-  {
-    "id": "sentence-004",
-    "text": "Die Spinne krabbelt im Keller.",
-    "categories": [
-      "K"
-    ],
-    "focusWords": [
-      "Keller"
-    ],
-    "exercises": {
-      "capitalization": {
-        "sourceId": "capital-001",
-        "prompt": "die spinne krabbelt im keller."
-      }
-    }
-  },
-  {
-    "id": "sentence-005",
-    "text": "Opa und Oma sind auf der Bank.",
-    "categories": [],
-    "focusWords": [],
-    "exercises": {
-      "capitalization": {
-        "sourceId": "capital-002",
-        "prompt": "opa und oma sind auf der bank."
-      }
-    }
-  },
-  {
-    "id": "sentence-006",
-    "text": "Lisa und Mia sind in der Schule.",
-    "categories": [
-      "SCH"
-    ],
-    "focusWords": [
-      "Schule"
-    ],
-    "exercises": {
-      "capitalization": {
-        "sourceId": "capital-003",
-        "prompt": "lisa und mia sind in der schule."
-      }
-    }
-  },
-  {
-    "id": "sentence-007",
-    "text": "Im Baum ist ein Vogel.",
-    "categories": [],
-    "focusWords": [],
-    "exercises": {
-      "capitalization": {
-        "sourceId": "capital-004",
-        "prompt": "im baum ist ein vogel."
-      }
-    }
-  },
-  {
-    "id": "sentence-008",
-    "text": "Das Fenster ist offen.",
-    "categories": [],
-    "focusWords": [],
-    "exercises": {
-      "capitalization": {
-        "sourceId": "capital-005",
-        "prompt": "das fenster ist offen."
-      }
-    }
-  },
-  {
-    "id": "sentence-009",
-    "text": "In der Klasse ist eine Tafel.",
-    "categories": [
-      "K"
-    ],
-    "focusWords": [
-      "Klasse"
-    ],
-    "exercises": {
-      "capitalization": {
-        "sourceId": "capital-006",
-        "prompt": "in der klasse ist eine tafel."
-      }
-    }
-  },
-  {
-    "id": "sentence-010",
-    "text": "Ali hat ein neues Spielzeug.",
-    "categories": [],
-    "focusWords": [],
-    "exercises": {
-      "capitalization": {
-        "sourceId": "capital-007",
-        "prompt": "ali hat ein neues spielzeug."
-      }
-    }
-  },
-  {
-    "id": "sentence-011",
-    "text": "Kari und Bu fliegen mit dem Ufo.",
-    "categories": [],
-    "focusWords": [],
-    "exercises": {
-      "capitalization": {
-        "sourceId": "capital-008",
-        "prompt": "kari und bu fliegen mit dem Ufo."
-      }
-    }
-  },
-  {
-    "id": "sentence-012",
-    "text": "Papa und Mama fahren mit dem Auto.",
-    "categories": [
-      "H"
-    ],
-    "focusWords": [
-      "fahren"
-    ],
-    "exercises": {
-      "capitalization": {
-        "sourceId": "capital-009",
-        "prompt": "papa und mama fahren mit dem auto."
-      }
-    }
-  },
-  {
-    "id": "sentence-013",
-    "text": "Die Limonade ist gelb.",
-    "categories": [],
-    "focusWords": [],
-    "exercises": {
-      "capitalization": {
-        "sourceId": "capital-010",
-        "prompt": "die limonade ist gelb."
-      }
-    }
-  },
-  {
-    "id": "sentence-014",
-    "text": "Ich esse die Schokolade im Haus.",
-    "categories": [
-      "H",
-      "D"
-    ],
-    "focusWords": [
-      "Haus",
-      "Schokolade"
-    ],
-    "exercises": {
-      "correctWriting": {
-        "sourceId": "write-001",
-        "prompt": "IchessedieSchokoladeimHaus."
-      }
-    }
-  }
+  {"id": "sentence-001", "text": "Ich schneide die Haare mit der Schere.", "categories": ["H", "SCH"], "focusWords": ["Haare", "Schere", "schneiden"], "exercises": {"scrambledSentences": {"sourceId": "schuettel-001", "answerTokens": ["Ich", "schneide", "die", "Haare", "mit", "der", "Schere", "."]}}},
+  {"id": "sentence-002", "text": "Das Schwein frisst den Salat.", "categories": ["SCH"], "focusWords": ["Schwein"], "exercises": {"scrambledSentences": {"sourceId": "schuettel-002", "answerTokens": ["Das", "Schwein", "frisst", "den", "Salat", "."]}}},
+  {"id": "sentence-003", "text": "Der Schwan schwimmt auf dem See.", "categories": ["SCH"], "focusWords": ["Schwan", "schwimmen"], "exercises": {"scrambledSentences": {"sourceId": "schuettel-003", "answerTokens": ["Der", "Schwan", "schwimmt", "auf", "dem", "See", "."]}}},
+  {"id": "sentence-004", "text": "Die Spinne krabbelt im Keller.", "categories": ["K"], "focusWords": ["Keller", "krabbeln"], "exercises": {"capitalization": {"sourceId": "capital-001", "prompt": "die spinne krabbelt im keller."}}},
+  {"id": "sentence-005", "text": "Opa und Oma sind auf der Bank.", "categories": [], "focusWords": [], "exercises": {"capitalization": {"sourceId": "capital-002", "prompt": "opa und oma sind auf der bank."}}},
+  {"id": "sentence-006", "text": "Lisa und Mia sind in der Schule.", "categories": ["SCH"], "focusWords": ["Schule"], "exercises": {"capitalization": {"sourceId": "capital-003", "prompt": "lisa und mia sind in der schule."}}},
+  {"id": "sentence-007", "text": "Im Baum ist ein Vogel.", "categories": [], "focusWords": [], "exercises": {"capitalization": {"sourceId": "capital-004", "prompt": "im baum ist ein vogel."}}},
+  {"id": "sentence-008", "text": "Das Fenster ist offen.", "categories": [], "focusWords": [], "exercises": {"capitalization": {"sourceId": "capital-005", "prompt": "das fenster ist offen."}}},
+  {"id": "sentence-009", "text": "In der Klasse ist eine Tafel.", "categories": ["K"], "focusWords": ["Klasse"], "exercises": {"capitalization": {"sourceId": "capital-006", "prompt": "in der klasse ist eine tafel."}}},
+  {"id": "sentence-010", "text": "Ali hat ein neues Spielzeug.", "categories": ["H"], "focusWords": ["haben"], "exercises": {"capitalization": {"sourceId": "capital-007", "prompt": "ali hat ein neues spielzeug."}}},
+  {"id": "sentence-011", "text": "Kari und Bu fliegen mit dem Ufo.", "categories": ["K"], "focusWords": ["Kari"], "exercises": {"capitalization": {"sourceId": "capital-008", "prompt": "kari und bu fliegen mit dem Ufo."}}},
+  {"id": "sentence-012", "text": "Papa und Mama fahren mit dem Auto.", "categories": ["H", "P"], "focusWords": ["fahren", "Papa"], "exercises": {"capitalization": {"sourceId": "capital-009", "prompt": "papa und mama fahren mit dem auto."}}},
+  {"id": "sentence-013", "text": "Die Limonade ist gelb.", "categories": [], "focusWords": [], "exercises": {"capitalization": {"sourceId": "capital-010", "prompt": "die limonade ist gelb."}}},
+  {"id": "sentence-014", "text": "Ich esse die Schokolade im Haus.", "categories": ["D", "H", "SCH"], "focusWords": ["Haus", "Schokolade"], "exercises": {"correctWriting": {"sourceId": "write-001", "prompt": "IchessedieSchokoladeimHaus."}}},
+  {"id": "sentence-A01", "text": "Die Kerze brennt.", "categories": ["K"], "focusWords": ["Kerze"], "exercises": {}},
+  {"id": "sentence-A02", "text": "Der Fliegenpilz ist giftig.", "categories": [], "focusWords": [], "exercises": {}},
+  {"id": "sentence-A03", "text": "Der Zaun ist braun.", "categories": ["Z"], "focusWords": ["Zaun"], "exercises": {}},
+  {"id": "sentence-A04", "text": "Die Zitrone ist sauer.", "categories": ["Z"], "focusWords": ["Zitrone"], "exercises": {}},
+  {"id": "sentence-A05", "text": "Der Arzt ist nett.", "categories": ["Z"], "focusWords": ["Arzt"], "exercises": {}},
+  {"id": "sentence-A06", "text": "Der Zauberer zaubert.", "categories": ["Z"], "focusWords": ["Zauberer", "zaubern"], "exercises": {}},
+  {"id": "sentence-A07", "text": "Er zeigt auf seinen Hut.", "categories": ["H", "Z"], "focusWords": ["Hut", "zeigen"], "exercises": {}},
+  {"id": "sentence-A08", "text": "Zwei Hasen kommen heraus.", "categories": ["H", "K", "Z"], "focusWords": ["Hase", "kommen", "zwei"], "exercises": {}},
+  {"id": "sentence-Z01", "text": "Die Frau kommt mit dem Zug in Kalkutta an.", "categories": ["K", "Z"], "focusWords": ["kommen", "Kalkutta", "Zug"], "exercises": {}},
+  {"id": "sentence-Z02", "text": "Meine Mutter kauft Zimt auf dem Markt.", "categories": ["K", "Z"], "focusWords": ["kaufen", "Zimt"], "exercises": {}},
+  {"id": "sentence-Z03", "text": "Die Schafe sind am Zaun und warten auf den Farmer.", "categories": ["SCH", "Z"], "focusWords": ["Schaf", "Zaun"], "exercises": {}},
+  {"id": "sentence-Z04", "text": "Ich gehe zum Zahnarzt und er schaut sich meinen Zahn an.", "categories": ["SCH", "Z"], "focusWords": ["schauen", "Zahnarzt", "Zahn"], "exercises": {}},
+  {"id": "sentence-Z05", "text": "Ich schreibe meinen Namen auf einen kleinen Zettel.", "categories": ["K", "SCH", "Z"], "focusWords": ["schreiben", "klein", "Zettel"], "exercises": {}},
+  {"id": "sentence-Z06", "text": "Timo und Ole schlafen in einem Zelt im Wald.", "categories": ["D", "SCH", "Z"], "focusWords": ["schlafen", "Zelt", "Wald"], "exercises": {}},
+  {"id": "sentence-Z07", "text": "Im Klassenzimmer tanzen zehn Kinder zu leiser Musik.", "categories": ["D", "K", "Z"], "focusWords": ["Klassenzimmer", "tanzen", "zehn", "Kind", "Musik"], "exercises": {}},
+  {"id": "sentence-Z08", "text": "Der Adler sieht die kleine Katze auf der Mauer.", "categories": ["H", "K"], "focusWords": ["sehen", "klein", "Katze"], "exercises": {}},
+  {"id": "sentence-Z09", "text": "Ich finde einen Schatz im Keller.", "categories": ["K", "SCH"], "focusWords": ["Schatz", "Keller"], "exercises": {}},
+  {"id": "sentence-Z10", "text": "Das Seil an der Schaukel ist zu kurz und ich kann nicht schaukeln.", "categories": ["K", "SCH", "Z"], "focusWords": ["Schaukel", "kurz", "können", "schaukeln"], "exercises": {}},
+  {"id": "sentence-Z11", "text": "Ich gehe mit meiner Familie in den Zoo und sehe viele Tiere.", "categories": ["H", "Z"], "focusWords": ["Zoo", "sehen"], "exercises": {}},
+  {"id": "sentence-Z12", "text": "Farmer Ken holt das Holz mit dem Traktor aus dem Wald.", "categories": ["D", "H", "K"], "focusWords": ["Ken", "holen", "Holz", "Traktor", "Wald"], "exercises": {}},
+  {"id": "sentence-Z13", "text": "In der Schule malen alle Kinder ein rotes Herz ins Heft.", "categories": ["D", "H", "K", "SCH"], "focusWords": ["Schule", "Kind", "Herz", "Heft"], "exercises": {}},
+  {"id": "sentence-Z14", "text": "Er kauft Zitronen im Laden und er macht eine Limonade zuhause.", "categories": ["D", "K", "Z"], "focusWords": ["kaufen", "Zitrone", "Laden"], "exercises": {}},
+  {"id": "sentence-P01", "text": "Die Piraten sind auf dem Schiff.", "categories": ["P", "SCH"], "focusWords": ["Pirat", "Schiff"], "exercises": {}},
+  {"id": "sentence-P02", "text": "Der Polizist ist im Polizeiauto und wartet.", "categories": ["P", "Z"], "focusWords": ["Polizist", "Polizeiauto"], "exercises": {}},
+  {"id": "sentence-P03", "text": "Papa kauft der Prinzessin eine kleine Puppe.", "categories": ["K", "P"], "focusWords": ["Papa", "kaufen", "Prinzessin", "klein", "Puppe"], "exercises": {}},
+  {"id": "sentence-P04", "text": "Ich esse Pizza mit meiner Familie.", "categories": ["P", "Z"], "focusWords": ["Pizza"], "exercises": {}},
+  {"id": "sentence-P05", "text": "Ich kaufe Pilze und Paprika auf dem Markt.", "categories": ["K", "P", "Z"], "focusWords": ["kaufen", "Pilz", "Paprika"], "exercises": {}},
+  {"id": "sentence-P06", "text": "Ich lese Fionas Postkarte.", "categories": ["P"], "focusWords": ["Postkarte"], "exercises": {}},
+  {"id": "sentence-P07", "text": "Ich finde die Raupe mit der Lupe.", "categories": ["P"], "focusWords": ["Raupe"], "exercises": {}},
+  {"id": "sentence-P08", "text": "Papa wartet an der roten Ampel.", "categories": ["P"], "focusWords": ["Papa", "Ampel"], "exercises": {}},
+  {"id": "sentence-P09", "text": "Er holt ein Paket aus dem Auto.", "categories": ["H", "K", "P"], "focusWords": ["holen", "Paket"], "exercises": {}},
+  {"id": "sentence-P10", "text": "Ich putze das Fenster in meinem Zimmer.", "categories": ["P", "Z"], "focusWords": ["putzen", "Zimmer"], "exercises": {}},
+  {"id": "sentence-P11", "text": "Wir essen Suppe und trinken Wasser.", "categories": ["K", "P"], "focusWords": ["Suppe", "trinken"], "exercises": {}},
+  {"id": "sentence-P12", "text": "In der Schule sind Treppen.", "categories": ["P", "SCH"], "focusWords": ["Schule", "Treppe"], "exercises": {}},
+  {"id": "sentence-H01", "text": "Der Teppich ist auf dem Boden.", "categories": ["P"], "focusWords": ["Teppich"], "exercises": {}},
+  {"id": "sentence-H02", "text": "Die Puppe ist im Zimmer.", "categories": ["P", "Z"], "focusWords": ["Puppe", "Zimmer"], "exercises": {}},
+  {"id": "sentence-H03", "text": "Der Planet ist im Weltall.", "categories": ["P"], "focusWords": ["Planet"], "exercises": {}},
+  {"id": "sentence-H04", "text": "Der Pirat ist auf dem Schiff.", "categories": ["P", "SCH"], "focusWords": ["Pirat", "Schiff"], "exercises": {}},
+  {"id": "sentence-H05", "text": "Wir stempeln mit dem Stempel.", "categories": ["P"], "focusWords": ["stempeln", "Stempel"], "exercises": {}},
+  {"id": "sentence-H06", "text": "Die Taschenlampe ist auf dem Tisch.", "categories": ["P", "SCH"], "focusWords": ["Taschenlampe", "Tisch"], "exercises": {}},
+  {"id": "sentence-H07", "text": "Der Polizist ist an der Ampel.", "categories": ["P"], "focusWords": ["Polizist", "Ampel"], "exercises": {}},
+  {"id": "sentence-H08", "text": "Das Auto parkt im Parkhaus.", "categories": ["P"], "focusWords": ["parken", "Parkhaus"], "exercises": {}},
+  {"id": "sentence-H09", "text": "Das Paket ist auf der Treppe.", "categories": ["K", "P"], "focusWords": ["Paket", "Treppe"], "exercises": {}},
+  {"id": "sentence-H10", "text": "Die Palme ist auf der Insel.", "categories": ["P"], "focusWords": ["Palme"], "exercises": {}},
+  {"id": "sentence-H11", "text": "Der Panda isst Bambus im Zoo.", "categories": ["P", "Z"], "focusWords": ["Panda", "Zoo"], "exercises": {}},
+  {"id": "sentence-H12", "text": "Tim hat einen Pullover an.", "categories": ["H", "P"], "focusWords": ["haben", "Pullover"], "exercises": {}},
+  {"id": "sentence-H13", "text": "Das Pony ist am Zaun.", "categories": ["P", "Z"], "focusWords": ["Pony", "Zaun"], "exercises": {}},
+  {"id": "sentence-H14", "text": "Die Raupe ist auf dem Blatt.", "categories": ["P"], "focusWords": ["Raupe"], "exercises": {}},
+  {"id": "sentence-H15", "text": "Die Wippe ist im Gras.", "categories": ["P"], "focusWords": ["Wippe"], "exercises": {}}
 ]

@@ -11,6 +11,8 @@ type CorrectWritingGamePageProps = {
   category?: SentenceCategoryId | null
 }
 
+const GAME_LENGTH = 10
+
 type Feedback = "correct" | "incorrect" | null
 
 function shuffle<T>(items: T[]): T[] {
@@ -37,7 +39,7 @@ export function CorrectWritingGamePage({
 
   const [exercises, setExercises] = useState<
     CorrectWritingExercise[]
-  >(() => shuffle(allExercises))
+  >(() => shuffle(allExercises).slice(0, GAME_LENGTH))
 
   const [
     currentExerciseIndex,
@@ -105,7 +107,7 @@ export function CorrectWritingGamePage({
 
   function handleRestart() {
     const newExercises =
-      shuffle(allExercises)
+      shuffle(allExercises).slice(0, GAME_LENGTH)
 
     setExercises(newExercises)
     setCurrentExerciseIndex(0)

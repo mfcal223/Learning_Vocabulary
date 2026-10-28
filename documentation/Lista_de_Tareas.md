@@ -9,7 +9,7 @@
 6. actualizar el documento de Game's architecture
    1. modificar / actualizar los cambios de diseño
    2. agregar una regla de diseño: no necesitamos que todos los juegos tengan ejercicios para cada grupo. Si una lista nueva contiene sustantivos y adjetivos, pero ningún verbo, no tendría sentido inventar ejercicios de conjugación solo para completar el menú.
-   
+7. se agrega un achivo central de traducciones uiText.ts. En el extremo superior derecho del HOME y del menú de cada letra aparecerán dos botones: ES / EN. El alemán siempre estará visible. El usuario decide si quiere acompañarlo con español o inglés. La preferencia se mantiene al navegar y también después de recargar la página, siempre que el navegador permita guardarla.
 ---
 
 ## Plan de refactorización
@@ -71,3 +71,9 @@ De esta manera, no necesitamos guardar tres copias de Ich esse die Schokolade im
     }
   }
 ```
+
+---
+
+agregamo botones ENG y SPA para que el  usuario elija el idioma de traduccion de la interfaz
+
+agregamos casi 50 oraciones al pool y las clasificamos (reglas de clasificacion)
